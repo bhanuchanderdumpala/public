@@ -5,65 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Marks Calculation</title>
 </head>
+
+
+<style>
+.heading {
+    text-align: center;
+    font-size: large;
+    background-color: rgb(143, 165, 165);
+    border: 30% salmon;
+    margin: 10px;
+    padding: 30px;
+    width: auto;
+    /* position: absolute; */
+    font-size: 200%;
+    font-weight: bold;
+    border: darkorange;
+
+    
+  
+
+}
+.li{
+    display: flex; 
+    font-weight: bold;
+
+    display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            width: 50%;
+}
+
+.container{
+    text-align: center;
+    font-size: large;
+    
+    background-color: rgb(225, 227, 228);
+    
+    margin: 10px;
+    padding: 10px;
+    width: 70%;
+    
+    font-size: 100%;
+    font-weight: bold;
+    display: flexbox;
+
+
+}
+.bt{
+    background-color: brown;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+    
+    
+}
+.bt:hover {
+            background-color: darkred;
+        }
+
+
+
+
+
+</style>
 <body>
+    <div class="container">
+    <div class="heading"> Student Marks Calculation     </div>
+    </br>
+    
+            <label class="li"> Enter Student Name : <input type="text"  id="StudentName">
+             </label> </br>
 
-<script> 
+             <label class="li"> Enter Student School Name : <input type="text" inline="School" id="school">
+             </label> </br>
 
-// Get Student 1 Details
-var studentName1 = prompt("Enter First Student Name ");
-var firstStudentSchoolName = prompt("Enter First Student School Name");
+             <label class="li"> Enter M1 Marks : <input type="text"  id="m1">
+             </label> </br>
 
-// Get Student 2 Details
-var studentName2 = prompt("Enter Second Student Name ");
-var secondStudentSchoolName = prompt("Enter Second Student School Name");
+             <label class="li"> Enter M2 Marks : <input type="text"  id="m2">
+             </label> </br>
 
-// Get Student 1 Marks
-var s1m1 = parseFloat(prompt("Enter Marks s1M1 "));
-var s1m2 = parseFloat(prompt("Enter Marks s1M2 "));
-var s1m3 = parseFloat(prompt("Enter Marks s1M3 "));
-var s1m4 = parseFloat(prompt("Enter Marks s1M4 "));
+             <label class="li"> Enter M3 Marks : <input type="text"  id="m3">
+             </label> </br>
 
-// Get Student 2 Marks
-var s2m1 = parseFloat(prompt("Enter Marks s2M1 "));
-var s2m2 = parseFloat(prompt("Enter Marks s2M2 "));
-var s2m3 = parseFloat(prompt("Enter Marks s2M3 "));
-var s2m4 = parseFloat(prompt("Enter Marks s2M4 "));
+             <label class="li"> Enter M4  Marks : <input type="text"  id="m4">
+             </label> </br>
 
-// Calculate Total Marks
-var s1total = s1m1 + s1m2 + s1m3 + s1m4;
-var s2total = s2m1 + s2m2 + s2m3 + s2m4;
+             <button class="li-bt" onclick="calculateTotal()"> Caluclate </button>
 
-// Calculate Average Marks
-var s1avgMarks = s1total / 4;
-var s2avgMarks = s2total / 4;
+             <label class="li"> Results : </label> </br>
 
-// Calculate Percentage
-var s1marksPercentage = (s1total / 400) * 100; 
-var s2marksPercentage = (s2total / 400) * 100;
+             <label class="li"> Total : <input type="text"  id="total">
+             </label> </br>
 
-// Find Highest and Lowest Marks
-var s1highest = Math.max(s1m1, s1m2, s1m3, s1m4);
-var s1lowest = Math.min(s1m1, s1m2, s1m3, s1m4);
 
-var s2highest = Math.max(s2m1, s2m2, s2m3, s2m4);
-var s2lowest = Math.min(s2m1, s2m2, s2m3, s2m4);
 
-// Display Results
-console.log("\n---- Student 1 Details ----");
-console.log("Name: " + studentName1 + " School Name: " + firstStudentSchoolName);
-console.log("Total Marks: " + s1total);
-console.log("Average Marks: " + s1avgMarks);
-console.log("Percentage: " + s1marksPercentage.toFixed(2) + "%");
-console.log("Highest Marks: " + s1highest);
-console.log("Lowest Marks: " + s1lowest);
 
-console.log("\n---- Student 2 Details ----");
-console.log("Name: " + studentName2 + " School Name: " + secondStudentSchoolName);
-console.log("Total Marks: " + s2total);
-console.log("Average Marks: " + s2avgMarks);
-console.log("Percentage: " + s2marksPercentage);
-console.log("Highest Marks: " + s2highest);
-console.log("Lowest Marks: " + s2lowest);
+     </div>
+
+ <script> 
+ function calculateTotal()
+ {
+    var marks1=parseFloat(document.getElementById("m1").value);
+    var marks2=parseFloat(document.getElementById("m2").value);
+    var marks3=parseFloat(document.getElementById("m3").value);
+    var marks4=parseFloat(document.getElementById("m4").value);
+    var totalmarks=marks1+marks2+marks3+marks4;
+    document.getElementById("total").value=totalmarks;
+
+
+
+ }
+
+
+
+// // Get Student 1 Details
+// // var studentName1 = prompt("Enter First Student Name ");
+// // var firstStudentSchoolName = prompt("Enter First Student School Name");
+
+// // // Get Student 2 Details
+// // var studentName2 = prompt("Enter Second Student Name ");
+// // var secondStudentSchoolName = prompt("Enter Second Student School Name");
+
+// // Get Student 1 Marks
+
+// var
+// var s1m1 = parseFloat(prompt("Enter Marks s1M1 "));
+// var s1m2 = parseFloat(prompt("Enter Marks s1M2 "));
+// var s1m3 = parseFloat(prompt("Enter Marks s1M3 "));
+// var s1m4 = parseFloat(prompt("Enter Marks s1M4 "));
+
+// // Get Student 2 Marks
+// var s2m1 = parseFloat(prompt("Enter Marks s2M1 "));
+// var s2m2 = parseFloat(prompt("Enter Marks s2M2 "));
+// var s2m3 = parseFloat(prompt("Enter Marks s2M3 "));
+// var s2m4 = parseFloat(prompt("Enter Marks s2M4 "));
+
+// // Calculate Total Marks
+// var s1total = s1m1 + s1m2 + s1m3 + s1m4;
+// var s2total = s2m1 + s2m2 + s2m3 + s2m4;
+
+// // Calculate Average Marks
+// var s1avgMarks = s1total / 4;
+// var s2avgMarks = s2total / 4;
+
+// // Calculate Percentage
+// var s1marksPercentage = (s1total / 400) * 100; 
+// var s2marksPercentage = (s2total / 400) * 100;
+
+// // Find Highest and Lowest Marks
+// var s1highest = Math.max(s1m1, s1m2, s1m3, s1m4);
+// var s1lowest = Math.min(s1m1, s1m2, s1m3, s1m4);
+
+// var s2highest = Math.max(s2m1, s2m2, s2m3, s2m4);
+// var s2lowest = Math.min(s2m1, s2m2, s2m3, s2m4);
+
+// // Display Results
+// console.log("\n---- Student 1 Details ----");
+// console.log("Name: " + studentName1 + " School Name: " + firstStudentSchoolName);
+// console.log("Total Marks: " + s1total);
+// console.log("Average Marks: " + s1avgMarks);
+// console.log("Percentage: " + s1marksPercentage.toFixed(2) + "%");
+// console.log("Highest Marks: " + s1highest);
+// console.log("Lowest Marks: " + s1lowest);
+
+// console.log("\n---- Student 2 Details ----");
+// console.log("Name: " + studentName2 + " School Name: " + secondStudentSchoolName);
+// console.log("Total Marks: " + s2total);
+// console.log("Average Marks: " + s2avgMarks);
+// console.log("Percentage: " + s2marksPercentage);
+// console.log("Highest Marks: " + s2highest);
+// console.log("Lowest Marks: " + s2lowest);
 
 </script>
 
