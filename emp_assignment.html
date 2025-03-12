@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Calculation</title>
+</head>
+<body>
+
+<script> 
+
+var studentName = prompt("Enter Student Name ");
+var m1 = parseFloat(prompt("Enter Marks M1 "));
+var m2 = parseFloat(prompt("Enter Marks M2 "));
+var m3 = parseFloat(prompt("Enter Marks M3 "));
+var m4 = parseFloat(prompt("Enter Marks M4 "));
+
+// Calculate Total Marks
+var total = m1 + m2 + m3 + m4;
+
+// Calculate Average Marks
+var avgMarks = total / 4;
+
+// Calculate Percentage
+var marksPercentage = (total / 400) * 100;
+
+// Find Highest and Lowest Marks
+var highest = Math.max(m1, m2, m3, m4);
+var lowest = Math.min(m1, m2, m3, m4);
+
+console.log("Student Name: " + studentName);
+console.log("Total Marks: " + total);
+console.log("Average Marks: " + avgMarks);
+console.log("Marks Percentage: " + marksPercentage + "%");
+console.log("Highest Marks: " + highest);
+console.log("Lowest Marks: " + lowest);
+
+</script>
+
+</body>
+</html>
