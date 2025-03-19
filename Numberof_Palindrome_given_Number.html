@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of PalindromeNumber for given numbers</title>  <!-- Title inside head -->
+
+    <style>
+       
+    </style>
+</head>
+
+<body>
+<h1> Number of PalindromeNumber for given numbers</h1>
+   <script>
+var start=parseInt(prompt("Enter any number for from start the palidrome of given number "))
+var end=parseInt(prompt("Enter any number for from start the palidrome of given number "))
+var count=0;
+var count1=0;
+for(var k=start;k<=end;k++)
+
+{
+
+var n=k;
+var orginalnumber=n;
+
+var reversenumber=0
+while(n>0)
+{
+var rem=n%10;
+n=n/10;
+n=parseInt(n);
+reversenumber=reversenumber*10+rem;
+
+
+}
+//console.log("The reverse of given number: " + reversenumber);
+
+if(orginalnumber==reversenumber)
+{
+    console.log(orginalnumber + " : is a palidrome number ")
+    count++
+
+}
+else{
+    console.log ( orginalnumber + " is not palindrome number")
+    count1++;
+}
+}
+// else {
+//     console.log("The given number is not palindrome number: " + reversenumber)
+// }
+
+console.log("Tha total palindrome number : " + count)
+console.log("Tha total non palindrome number : " + count1)
+
+   </script>
+
+</body>
+</html>

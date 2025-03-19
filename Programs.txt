@@ -1,0 +1,11 @@
+
+
+
+
+Given number reverse
+palindrome or not
+sum of given number
+list of all palidrom number from 1 to 1000
+read a number of user and check wther its aromstrong number or not
+W a P find total number digits in a given number
+to find lucky number from given number
