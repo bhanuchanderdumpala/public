@@ -7,20 +7,30 @@
     
 </head>
 <body>
-   <script> 
-    var a1=parseInt(prompt("Enter A value of eneter"));
-    var end=parseInt(Prompt("Enter the end of number"));
-    for(var i=a1; i<end; i++)
+   <Script>
+    
+    var count = 0;  
+    var num = 2;    
 
-     
+    console.log("First 100 prime numbers:");
 
-{
-    if( i % 2 == 0)
-    {
-    console.log(i);
+    for (; count < 100; num++) { 
+        var isPrime = true;  
+
+        for (var i = 2; i < num; i++) {  
+            if (num % i == 0) {  
+                isPrime = false;  
+                break;  
+            }
+        }
+
+        if (isPrime) {  
+            console.log(num);
+            count++;  
+        }
     }
-
-}
+</script>
+   </Script>
 
 
 
@@ -31,7 +41,7 @@
 
 
 
-   </script>
+   
 
 
 </body>
