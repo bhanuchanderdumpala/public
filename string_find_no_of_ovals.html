@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>find of total number of oval in given string</title> <!-- Title inside head -->
+
+  <style>
+
+  </style>
+</head>
+<h1>find of total number of oval in given string</h1>
+<body>
+
+  <Script>
+    
+    var msg = prompt("Enter the string for find the of oval in given string");
+    console.log("enter string: " + msg);
+    console.log(" The length of the eneter string :" + msg.length);
+    
+
+    var count = 0;
+var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];  // Array of vowels
+
+for (var i = 0; i < msg.length; i++) {
+    if (vowels.includes(msg[i])) {  // Check if character is in the vowels array
+        count++;
+    }
+}
+
+// var count = 0;
+// for (var i = 0; i < msg.length; i++) {
+//     if (msg[i] == 'a' || msg[i] == 'e' || msg[i] == 'i' || msg[i] == 'o' || msg[i] == 'u' || 
+//         msg[i] == 'A' || msg[i] == 'E' || msg[i] == 'I' || msg[i] == 'O' || msg[i] == 'U') {
+//         count++;
+//     }
+// }
+
+
+console.log("The number of vowels: " + count)
+      
+ 
+// var countspace=0;
+//   for(var j=0;j<msg.length;j++)
+//   {
+//     if(msg[j]===' ')
+//   {
+//     countspace++;
+    
+//   }
+//   }
+
+//   var totalnumberofcharector=count;
+//   console.log("Tha total nuber of spaces : " + countspace);
+
+
+// console.log("Tha total nuber of charectors without spaces : " + totalnumberofcharector);
+  </Script>
+
+</body>
+
+</html>

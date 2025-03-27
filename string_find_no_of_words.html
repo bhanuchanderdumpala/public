@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FInd the number of words</title> <!-- Title inside head -->
+
+  <style>
+
+  </style>
+</head>
+<h1> Find the number of words in given string</h1>
+<body>
+
+  <Script>
+    var count=0;
+    var msg = prompt("Enter the string for count the no of charectors in a string");
+    console.log("Given String : " + msg );
+    console.log(" The length of the eneter string :" + msg.length);
+
+  //   for(var i=0;i<msg.length;i++)
+  //   {
+  //      if(msg[i]!==' ')
+  //        {
+  //       count++;
+  //       }
+  //  }
+  // console.log("Tha number of charector along with space " + count);
+      
+ 
+var countspace=0;
+  for(var j=0;j<msg.length;j++)
+  {
+    if(msg[j]===' ')
+  {
+    countspace++;
+    
+  }
+  }
+
+  
+  console.log("Tha total number of spaces : " + countspace);
+  var totalnoofwords=countspace+1;
+
+
+console.log("Tha total number of  words in given string : " + totalnoofwords);
+  </Script>
+
+</body>
+
+</html>
