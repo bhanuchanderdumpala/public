@@ -29,7 +29,7 @@ function empSalaryCalulation()
 
     hra=basicSalary* 0.24;
     pf=basicSalary*0.12;
-    empspecialallowances=parseFloat(basicSalary)+parseFloat(hra);
+    empspecialallowances=parseInt(basicSalary)+parseInt(hra);
     transportAllowance=basicSalary*30/100;
     total=empspecialallowances+hra+pf+transportAllowance+basicSalary;
 }

@@ -2,10 +2,38 @@
 
 
 
-Given number reverse
-palindrome or not
-sum of given number
-list of all palidrom number from 1 to 1000
-read a number of user and check wther its aromstrong number or not
-W a P find total number digits in a given number
-to find lucky number from given number
+1. Given number reverse program
+2. Check the number palindrome or not
+3. sum of given number
+
+4. list of no of  palidrom number from geiven number
+5. read a number of user and check wther its aromstrong number or not
+6. W a P find total number digits in a given number
+7.  to find lucky number from given number
+8. chek given number is palidrom or not
+9. check the given number is prime or not
+10. list out the all prime numbers from given number
+11. reverse of given number
+12. sum of two numbers
+13. 
+
+
+array
+1. Read values dynamically into an array.
+2. Find the sum of all numeric values in a given array.
+3. Find all even numbers in a given array.
+4. Find all odd numbers in a given array.
+5. Find the second largest number in a given array.
+6. Find the reverse of a given array without using predefined methods.
+7. Sort the values in ascending and descending order without using predefined methods.
+8. Find all prime numbers in a given array.
+9. Find all palindrome numbers in a given array.
+10. Find all Armstrong numbers in a given array.
+
+String
+1. Total number of chareter within given string witout using predfined
+2. WAP to find out total number of words with in given string
+3. WAP to find of total number of oval in given string
+4. WAP to find out total number palindrome number in given numbers
+5. WAP Reverse of the given String
+6. Check weather given string part of given string or not
