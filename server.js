@@ -2,14 +2,22 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 8081; // You can change the port if needed
+const PORT = 8081;
 
-// 🔥 Serve static files from the 'public' folder
+// ✅ Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
 
-// 🔥 Serve json_empdetails.html when visiting "/"
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "json_empdetails.html"));
+// ✅ Dynamic route to serve any HTML file inside "public"
+app.get("/:filename", (req, res) => {
+    const fileName = req.params.filename;
+    const filePath = path.join(__dirname,fileName);
+
+    // Check if file exists before sending it
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            res.status(404).send("File Not Found");
+        }
+    });
 });
 
 // Start the server
