@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise</title>
+</head>
+<body>
+    <script>
+        var empdetils = () => {
+            var empName = prompt("Enter employee Name ");
+            var basicSalary = parseFloat(prompt("Enter employee basic salary "));
+
+         
+            var { hra, pf, empspecialallowances, transportAllowance, total } = empSalaryCalulation(basicSalary);
+
+           
+            display(empName, basicSalary, hra, pf, empspecialallowances, transportAllowance, total);
+        }
+
+        var empSalaryCalulation = (basicSalary) => {
+            let hra = basicSalary * 0.24;
+            let pf = basicSalary * 0.12;
+            let empspecialallowances = basicSalary + hra;
+            let transportAllowance = basicSalary * 0.30;
+            let total = basicSalary + hra + pf + empspecialallowances + transportAllowance;
+
+            return { hra, pf, empspecialallowances, transportAllowance, total };
+        }
+
+        var display = (empName, basicSalary, hra, pf, empspecialallowances, transportAllowance, total) => {
+            console.log("Employee Name: " + empName);
+            console.log("Basic Salary: " + basicSalary);
+            console.log(empName + " HRA: " + hra);
+            console.log("Special Allowance: " + empspecialallowances);
+            console.log("PF: " + pf);
+            console.log("Transport Allowance: " + transportAllowance);
+            console.log(empName + " Total Salary: " + total);
+        }
+
+        empdetils(); 
+    </script>
+</body>
+</html>

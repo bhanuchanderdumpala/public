@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracrice exersize</title> <!-- Title inside head -->
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+ //var a=[2,5,6,7,8];
+
+//  console.log(a);
+
+// var b = a.length;
+// console.log(b);
+// console.log(a[2]);
+// for(var i=0;i<a.length;i++)
+// {
+//     console.log(a); 
+// }
+
+// Read the values dyanmically into arry
+var b=[33,44,55,66];
+// var j=parseInt(prompt("Enter the B array length"));
+// for(var i=0;i<j;i++)
+// {
+//     var value=parseInt(prompt("Enter the B array values"));
+//     b.push(value);
+// }
+
+
+
+console.log(" Tha length of the B arry : " + b.length);
+console.log( " B arry values "+ b );
+//Push
+b.push(88);
+console.log(" Tha length of the B arry after push : " + b.length);
+console.log( " B arry values after push "+ b );
+
+
+//Predefined methods
+b.pop();
+console.log(" Tha length of the B arry after pop : " + b.length);
+console.log( " B arry after using the pop values "+ b );
+//swift
+b.shift();
+console.log(" Tha length of the B arry after shift : " + b.length);
+console.log( " B arry after using the shift values "+ b );
+b.push(8767);
+console.log(" Tha length of the B arry after push : " + b.length);
+console.log( " B arry values after push "+ b );
+//unswift
+b.unshift(999);
+console.log(" Tha length of the B arry after unshift : " + b.length);
+console.log( " B arry after using the shift unshift "+ b );
+
+//slice
+b.splice(1,2,3,4,45,5,6,78,8,9,977,3);
+console.log(" Tha length of the B arry after slice deleteing 1st postion 2 values : " + b.length);
+console.log( " B arry after using add three values 77,88,66 : "+ b );
+
+//only add for spectfic index
+b.splice(1,0,3,4,45,5,6,78,8,9,977,3);
+console.log(" Tha length of the B arry after slice deleteing 1st postion 2 values : " + b.length);
+console.log( " B arry after using add three values 77,88,66 : "+ b );
+
+
+    </script>
+
+
+
+</body>
+
+</html>

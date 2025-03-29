@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Calculation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: auto;
+        }
+        .container {
+            padding: 20px;
+            border: 5px solid #4516c7;
+            background-color: aquamarine;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(27, 110, 19, 0.1);
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        label {
+            width: 50%;
+            font-weight: bold;
+        }
+        input {
+            width: 45%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: rgb(196, 27, 27);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #da17af;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Marks Calculation</h2>
+        
+        <!-- Student 1 Details -->
+        <div class="form-group">
+            <label>Student 1 Name:</label>
+            <input type="text" id="studentName1">
+        </div>
+        <div class="form-group">
+            <label>School Name:</label>
+            <input type="text" id="schoolName1">
+        </div>
+
+        <!-- Student 1 Marks -->
+        <div class="form-group">
+            <label>Marks 1:</label>
+            <input type="number" id="s1m1">
+        </div>
+        <div class="form-group">
+            <label>Marks 2:</label>
+            <input type="number" id="s1m2">
+        </div>
+        <div class="form-group">
+            <label>Marks 3:</label>
+            <input type="number" id="s1m3">
+        </div>
+        <div class="form-group">
+            <label>Marks 4:</label>
+            <input type="number" id="s1m4">
+        </div>
+
+        <hr>
+
+        <!-- Student 2 Details -->
+        <div class="form-group">
+            <label>Student 2 Name:</label>
+            <input type="text" id="studentName2">
+        </div>
+        <div class="form-group">
+            <label>School Name:</label>
+            <input type="text" id="schoolName2">
+        </div>
+
+        <!-- Student 2 Marks -->
+        <div class="form-group">
+            <label>Marks 1:</label>
+            <input type="number" id="s2m1">
+        </div>
+        <div class="form-group">
+            <label>Marks 2:</label>
+            <input type="number" id="s2m2">
+        </div>
+        <div class="form-group">
+            <label>Marks 3:</label>
+            <input type="number" id="s2m3">
+        </div>
+        <div class="form-group">
+            <label>Marks 4:</label>
+            <input type="number" id="s2m4">
+        </div>
+
+        <button onclick="calculateResults()">Calculate</button>
+
+        <hr>
+
+        <!-- Results Display -->
+        <h3>Results</h3>
+
+        <div class="form-group">
+            <label>Total Marks (Student 1):</label>
+            <input type="text" id="s1total" readonly>
+        </div>
+        <div class="form-group">
+            <label>Average Marks:</label>
+            <input type="text" id="s1avg" readonly>
+        </div>
+        <div class="form-group">
+            <label>Percentage:</label>
+            <input type="text" id="s1percentage" readonly>
+        </div>
+        <div class="form-group">
+            <label>Highest Marks:</label>
+            <input type="text" id="s1highest" readonly>
+        </div>
+        <div class="form-group">
+            <label>Lowest Marks:</label>
+            <input type="text" id="s1lowest" readonly>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+            <label>Total Marks (Student 2):</label>
+            <input type="text" id="s2total" readonly>
+        </div>
+        <div class="form-group">
+            <label>Average Marks:</label>
+            <input type="text" id="s2avg" readonly>
+        </div>
+        <div class="form-group">
+            <label>Percentage:</label>
+            <input type="text" id="s2percentage" readonly>
+        </div>
+        <div class="form-group">
+            <label>Highest Marks:</label>
+            <input type="text" id="s2highest" readonly>
+        </div>
+        <div class="form-group">
+            <label>Lowest Marks:</label>
+            <input type="text" id="s2lowest" readonly>
+        </div>
+
+    </div>
+
+    <script>
+        function calculateResults() {
+            // Get Student 1 Marks
+            var s1m1 = parseFloat(document.getElementById("s1m1").value) || 0;
+            var s1m2 = parseFloat(document.getElementById("s1m2").value) || 0;
+            var s1m3 = parseFloat(document.getElementById("s1m3").value) || 0;
+            var s1m4 = parseFloat(document.getElementById("s1m4").value) || 0;
+
+            // Get Student 2 Marks
+            var s2m1 = parseFloat(document.getElementById("s2m1").value) || 0;
+            var s2m2 = parseFloat(document.getElementById("s2m2").value) || 0;
+            var s2m3 = parseFloat(document.getElementById("s2m3").value) || 0;
+            var s2m4 = parseFloat(document.getElementById("s2m4").value) || 0;
+
+            // Calculate Student 1 Results
+            var s1total = s1m1 + s1m2 + s1m3 + s1m4;
+            var s1avg = s1total / 4;
+            var s1percentage = (s1total / 400) * 100;
+            var s1highest = Math.max(s1m1, s1m2, s1m3, s1m4);
+            var s1lowest = Math.min(s1m1, s1m2, s1m3, s1m4);
+
+            // Calculate Student 2 Results
+            var s2total = s2m1 + s2m2 + s2m3 + s2m4;
+            var s2avg = s2total / 4;
+            var s2percentage = (s2total / 400) * 100;
+            var s2highest = Math.max(s2m1, s2m2, s2m3, s2m4);
+            var s2lowest = Math.min(s2m1, s2m2, s2m3, s2m4);
+
+            // Display Results
+            document.getElementById("s1total").value = s1total;
+            document.getElementById("s1avg").value = s1avg.toFixed(2);
+            document.getElementById("s1percentage").value = s1percentage.toFixed(2) + "%";
+            document.getElementById("s1highest").value = s1highest;
+            document.getElementById("s1lowest").value = s1lowest;
+
+            document.getElementById("s2total").value = s2total;
+            document.getElementById("s2avg").value = s2avg.toFixed(2);
+            document.getElementById("s2percentage").value = s2percentage.toFixed(2) + "%";
+            document.getElementById("s2highest").value = s2highest;
+            document.getElementById("s2lowest").value = s2lowest;
+        }
+    </script>
+
+</body>
+</html>

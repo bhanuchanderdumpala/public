@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var getStudentDetails = () => {
+                var sdetails = {};
+                sdetails.sname = prompt("Enter student name");
+                sdetails.age = prompt("entr student age");
+                sdetails.marks = [];
+                for (var i = 0 ; i < 5; i++) {
+                    sdetails.marks[i] = parseInt(prompt("enter sub marks" + i+1));
+                }
+                var marksDtails = getTotalAndAvg(sdetails.marks); // [300, 34.5]
+                sdetails.total = marksDtails[0];
+                sdetails.avg = marksDtails[1];
+                sdetails.grade = getGrade(sdetails.avg);
+                displayStudentDetials(sdetails);
+
+            }
+
+            var getTotalAndAvg = (marks) => {
+                var total = 0;
+                for (var i = 0; i < marks.length; i++) {
+                    total += marks[i];
+                }
+                var avg = total / marks.length;
+                return [total, avg];
+            }
+
+            var getGrade = (avg) => {
+                var grade = '';
+                if (avg >= 40) {
+                    grade = 'U passed';
+                } else {
+                    grade = 'Surprise';
+                }
+                return grade;
+            }
+
+            var displayStudentDetials = (details) => {
+                console.log("NAme is " + details.sname);
+                console.log("total is " + details.total);
+                console.log("Avg is " + details.avg);
+                console.log("Grade is " + details.grade);
+            }
+
+
+            getStudentDetails();
+        </script>
+    </body>
+</html>
