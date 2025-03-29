@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assending and Desending</title>  <!-- Title inside head -->
+
+    <style>
+      
+    </style>
+</head>
+
+<body>
+
+    <h1> Smallest, </h1>
+    <h1> largest </h1>
+    <h1> assending </h1>
+    <h1> decending</h1>
+
+
+    <script>   
+var b=[];
+var j=parseInt(prompt("Enter the B array length: "));
+for(var i=0;i<j;i++)
+{
+    var value=parseInt(prompt("Enter the B array values position of arry position: " + i ));
+    b.push(value);
+    
+}
+console.log(b);
+
+var total=0;
+for(var k=0;k<b.length;k++)
+{
+    var total=total+b[k];
+}
+console.log(b);
+
+console.log("The sum of arry totals : " + total);
+
+var countofeven=0;
+var sumevennum=0;
+var countofodd=0;
+var sumoddnum=0;
+
+for(k=0;k<b.length;k++)
+{
+if(b[k]%2==0)
+{
+    countofeven++;
+    var sumevennum=sumevennum+b[k];
+}
+
+
+}
+console.log("Tha nubmer of even number is given arrey : " + countofeven);
+console.log("Tha sum of  of even number is given arrey : " + sumevennum);
+
+
+
+
+for(k=0;k<b.length;k++)
+{
+if(b[k]%2!==0)
+{
+    countofodd++;
+    var sumoddnum=sumoddnum+b[k];
+   
+}
+
+
+}
+console.log("Tha nubmer of odd number is given arrey : " + countofodd);
+console.log("Tha sum  of odd number is given arrey : " + sumoddnum);
+
+var smallest = b[0];
+var largest = b[0];
+
+for (var i = 1; i < j; i++) {
+    if (b[i] < smallest) {
+        smallest = b[i];
+    }
+    if (b[i] > largest) {
+        largest = b[i];
+    }
+}
+console.log("Tha smallest number is given arrey : " + smallest);
+console.log("Tha largest number is given arrey : " + largest);
+
+
+for (var i = 0; i < j - 1; i++) {
+            for (var k = 0; k < j - 1 - i; k++) {
+                if (b[k] > b[k + 1]) {  
+                    var temp = b[k];
+                    b[k] = b[k + 1];
+                    b[k + 1] = temp;
+                }
+            }
+        }
+        console.log("Ascending Order:", b);
+
+
+        for (var i = 0; i < j - 1; i++) {
+            for (var k = 0; k < j - 1 - i; k++) {
+                if (b[k] < b[k + 1]) {  
+                    var temp = b[k];
+                    b[k] = b[k + 1];
+                    b[k + 1] = temp;
+                }
+            }
+        }
+console.log("Descending Order:", b);
+
+
+
+        
+    </script>
+
+   
+
+</body>
+</html>

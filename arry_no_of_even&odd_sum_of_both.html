@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracrice exersize</title>  <!-- Title inside head -->
+
+    <style>
+      
+    </style>
+</head>
+
+<body>
+
+    <h1> Number of odd number is given arry, </h1>
+    <h1> Number of even number is given arry, </h1>
+    <h1> Sum of even number is given arry, </h1>
+    <h1> Sum of odd number is given arry, </h1>
+
+
+    <script>   
+var b=[];
+var j=parseInt(prompt("Enter the B array length: "));
+for(var i=0;i<j;i++)
+{
+    var value=parseInt(prompt("Enter the B array values position of arry position: " + i ));
+    b.push(value);
+    
+}
+console.log(b);
+
+var total=0;
+for(var k=0;k<b.length;k++)
+{
+    var total=total+b[k];
+}
+console.log(b);
+
+console.log("The sum of arry totals : " + total);
+
+var countofeven=0;
+var sumevennum=0;
+var countofodd=0;
+var sumoddnum=0;
+
+for(k=0;k<b.length;k++)
+{
+if(b[k]%2==0)
+{
+    countofeven++;
+    var sumevennum=sumevennum+b[k];
+}
+
+
+}
+console.log("Tha nubmer of even number is given arrey : " + countofeven);
+console.log("Tha sum of  of even number is given arrey : " + sumevennum);
+
+
+
+
+for(k=0;k<b.length;k++)
+{
+if(b[k]%2!==0)
+{
+    countofodd++;
+    var sumoddnum=sumoddnum+b[k];
+   
+}
+
+
+}
+console.log("Tha nubmer of odd number is given arrey : " + countofodd);
+console.log("Tha sum  of odd number is given arrey : " + sumoddnum);
+
+        
+    </script>
+
+   
+
+</body>
+</html>
