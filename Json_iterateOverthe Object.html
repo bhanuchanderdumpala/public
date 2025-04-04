@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var details = {
+                name: 'Raj',
+                age: 20,
+                gender: 'Male'
+            };
+
+            var studentdetails= {
+                Sname:'Bhanu',
+                Address:'Hyderabad',
+                School:'ZPHS AVunoor',
+                age:90,
+
+            };
+
+            var bookDetails = {
+    bookName: 'My dream level',
+    author: {
+        name: 'Ravindranath Tagore',  // Corrected 'Tagor' to 'Tagore'
+        placeOfAuthor: 'Bengaluru',   // Corrected spelling of 'Benguloor' to 'Bengaluru'
+        authorAge: 65                 // Standardized key name
+    },
+    publisher: {                      // Corrected spelling of 'publiser' to 'publisher'
+        RahulPublisher: {              // Corrected key name
+            address: {
+                place: 'Vijayawada',   // Corrected spelling of 'Vijaywada' to 'Vijayawada'
+                street: 'Dr. Grapet Road',  // Fixed spelling of 'DrgrapetRaod'
+                houseNo: '10-14'       // Corrected key format
+            }
+        },
+        SpectrumPublisher: "Spectrum Vijayawada" // Fixed key format
+    },
+    discount: '20%',   // Standardized key names
+    bookPrice: 200     // Converted to a number for better handling
+};
+            
+            var iterateOverObject = (data) => {
+                for(var tempkey in data) {
+                
+
+                if(typeof(data[tempkey])=='object' && data[tempkey].length==undefined)
+                    {
+                        iterateOverObject(data[tempkey]);
+                    }
+
+                else {
+                    console.log(tempkey + ":" + data[tempkey]);
+                        }
+                
+                 }
+
+
+            }
+
+
+            iterateOverObject(details);
+            iterateOverObject(studentdetails );
+            iterateOverObject(bookDetails );
+
+        </script>
+    </body>
+</html>
