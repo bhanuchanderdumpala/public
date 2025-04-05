@@ -1,109 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pracrice exersize</title>  <!-- Title inside head -->
-    <link rel="stylesheet" href="app1.css">
-
-    <style>
-      
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice Exercise</title>
+  <link rel="stylesheet" href="app1.css" />
 </head>
-
 <body>
 
-    <h1> Reading the details form user and calulated and display to the user in same page</h1>
+  <h1>Reading details from user and displaying result</h1>
 
-    <ul>
-        <li> Enter the First value : 
-            <input type="Text" id="firstValue" required="">
-        </li>
-        <li> Enter the Second value : 
-            <input type="Text" id="secondValue" >
-        </li>
-        <li-button>  
-            <input type="button" value="Get Addition" onclick="addtion();">
-            <input type="button" value="Get Subtraction" onclick="sub();">
-            <input type="button" value="Get Multiplication" onclick="mul();">
-            <input type="button" value="Clear" onclick="clearResults();">
-            
-        </li-button>
+  <ul>
+    <li>Enter the First value:
+      <input type="text" id="firstValue" />
+    </li>
+    <li>Enter the Second value:
+      <input type="text" id="secondValue" />
+    </li>
 
-        <li alighn="left">  
-            The sum of two numbers : <span></span>
-        </li>
+    <li class="button-group">
+      <input type="button" value="Get Addition" onclick="addtion();">
+      <input type="button" value="Get Subtraction" onclick="sub();">
+      <input type="button" value="Get Multiplication" onclick="mul();">
+      <input type="button" value="Clear" onclick="clearFields();">
+    </li>
 
-        <li>  
-            The subtraction of two numbers : <span1></span1>
-        </li>
-        <li>  
-            The Multiplication of two numbers : <span2></span2>
-        </li>
-        
-    </ul>
+    <li>The sum of two numbers: <span id="sumResult"></span></li>
+    <li>The subtraction of two numbers: <span id="subResult"></span></li>
+    <li>The multiplication of two numbers: <span id="mulResult"></span></li>
 
-    <script>   
-    
-    var addtion=()=>{
-        var value1=parseInt(document.querySelector("#firstValue").value);
-        var value2=parseInt(document.querySelector("#secondValue").value);
-                var result=value1+value2;
-        document.querySelector("span").innerText=result;
+    <li id="resultblock"></li>
+  </ul>
 
-        document.querySelector("#addResult").innerText = "Sum: " + result;
-  document.querySelector("#addResult").style.display = "block";
-
-  document.querySelector("#subResult").style.display = "none";
-  document.querySelector("#mulResult").style.display = "none";
-
-        
+  <script>
+    const addtion = () => {
+      const value1 = parseInt(document.getElementById("firstValue").value);
+      const value2 = parseInt(document.getElementById("secondValue").value);
+      const result = value1 + value2;
+      document.getElementById("sumResult").innerText = result;
+      document.getElementById("resultblock").style.display = 'block';
     }
 
-
-    var sub=()=>{
-        var value1=parseInt(document.querySelector("#firstValue").value);
-        var value2=parseInt(document.querySelector("#secondValue").value);
-        var result=value1-value2;
-        document.querySelector("span1").innerText=result;
-        document.querySelector("span1").style.display = "inline";
-
-        document.querySelector("span").style.display = "none";
-        document.querySelector("span2").style.display = "none";
-
+    const sub = () => {
+      const value1 = parseInt(document.getElementById("firstValue").value);
+      const value2 = parseInt(document.getElementById("secondValue").value);
+      const result = value1 - value2;
+      document.getElementById("subResult").innerText = result;
+      document.getElementById("resultblock").style.display = 'block';
     }
 
-    var mul=()=>{
-        var value1=parseInt(document.querySelector("#firstValue").value);
-        var value2=parseInt(document.querySelector("#secondValue").value);
-        var result=value1*value2;
-        document.querySelector("span2").innerText=result;
-        document.querySelector("span2").style.display = "inline";
-
-         document.querySelector("span").style.display = "none";
-         document.querySelector("span1").style.display = "none";
-         
-
+    const mul = () => {
+      const value1 = parseInt(document.getElementById("firstValue").value);
+      const value2 = parseInt(document.getElementById("secondValue").value);
+      const result = value1 * value2;
+      document.getElementById("mulResult").innerText = result;
+      document.getElementById("resultblock").style.display = 'block';
     }
 
-    var clearResults=()=>{
-        document.querySelector("#firstValue").value = "";
-  document.querySelector("#secondValue").value = "";
-
-  document.querySelector("span").innerText = "";
-  document.querySelector("span1").innerText = "";
-  document.querySelector("span2").innerText = "";
-
-  document.querySelector("span").style.display = "none";
-  document.querySelector("span1").style.display = "none";
-  document.querySelector("span2").style.display = "none";
-
+    const clearFields = () => {
+      document.getElementById("firstValue").value = "";
+      document.getElementById("secondValue").value = "";
+      document.getElementById("sumResult").innerText = "";
+      document.getElementById("subResult").innerText = "";
+      document.getElementById("mulResult").innerText = "";
+      document.getElementById("resultblock").style.display = "none";
     }
-
-
-    </script>
-
-   
+  </script>
 
 </body>
 </html>

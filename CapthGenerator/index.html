@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="capthcallib.js"></script>
+        <title>
+            Captcha generator - example
+        </title>
+        <style>
+            .block {
+                text-align: center;
+                letter-spacing: 10px;
+                font-weight: bold;
+                font-size: 20px;
+                width: 150px;
+                padding: 20px;
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="block"></div>
+
+        <input type="button" value="Generate" onclick="getCaptcha()">
+        <script>
+            var getCaptcha = () => {
+                var captchaText = generateCaptchaText('LNULN');
+                document.querySelector(".block").innerText = captchaText;
+            }
+        </script>
+    </body>
+</html>
