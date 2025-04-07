@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var getEmpDetails = () => {
+                var empdetails = {};
+                empdetails.empname = prompt("Enter the EMployee name");
+                empdetails.basicSalary=parseInt(prompt("Enter employee basicsalary"));
+                var empSalaryCalulation = salaryCalulation (empdetails.basicSalary);
+                 empdetails.pf = empSalaryCalulation[0];
+                 empdetails.hra = empSalaryCalulation[1];
+                 empdetails.transportAllowance = empSalaryCalulation[2];
+                 empdetails.specialAllowances = empSalaryCalulation[3];
+                var display=displayDetails(empdetails);
+                console.log(empdetails);
+            }
+// var getTotalAndAvg = (marks) => {
+            var salaryCalulation=(basicSalary)=>
+            {
+                    var pf=basicSalary*0.12;
+                    var hra=basicSalary*0.24;
+                    var transportAllowance=(basicSalary+pf+hra)/100*12;
+                    var specialAllowances=transportAllowance*0.3;
+                    return [pf,hra,transportAllowance,specialAllowances];
+                    //var displayDetails1=displayDetails();
+
+            }
+
+            var displayDetails=(empdetails)=>
+            
+            {
+
+                console.log("Employee Name is : " + empdetails.empname);
+                console.log("Employee Basic Salary is : " + empdetails.basicSalary);
+                console.log("Employee HRA is : " + empdetails.hra);
+                console.log("Employee PF is : " + empdetails.pf);
+                console.log("Employee Transport allowance is : " + empdetails.transportAllowance);
+                console.log("Employee SpecialAllowances is : " + empdetails.specialAllowances);
+
+
+            }
+            getEmpDetails();
+
+
+            //     sdetails.age = prompt("entr student age");
+            //     sdetails.marks = [];
+            //     for (var i = 0 ; i < 5; i++) {
+            //         sdetails.marks[i] = parseInt(prompt("enter sub marks" + i+1));
+            //     }
+            //     var marksDtails = getTotalAndAvg(sdetails.marks); // [300, 34.5]
+            //     sdetails.total = marksDtails[0];
+            //     sdetails.avg = marksDtails[1];
+            //     sdetails.grade = getGrade(sdetails.avg);
+            //     displayStudentDetials(sdetails);
+
+            // }
+
+            // var getTotalAndAvg = (marks) => {
+            //     var total = 0;
+            //     for (var i = 0; i < marks.length; i++) {
+            //         total += marks[i];
+            //     }
+            //     var avg = total / marks.length;
+            //     return [total, avg];
+            // }
+
+            // var getGrade = (avg) => {
+            //     var grade = '';
+            //     if (avg >= 40) {
+            //         grade = 'U passed';
+            //     } else {
+            //         grade = 'Surprise';
+            //     }
+            //     return grade;
+            // }
+
+            // var displayStudentDetials = (details) => {
+            //     console.log("NAme is " + details.sname);
+            //     console.log("total is " + details.total);
+            //     console.log("Avg is " + details.avg);
+            //     console.log("Grade is " + details.grade);
+            // }
+
+
+            // getStudentDetails();
+        </script>
+    </body>
+</html>

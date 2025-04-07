@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome number or not</title> <!-- Title inside head -->
+
+  <style>
+
+
+
+  </style>
+</head>
+
+<body>
+<h1>palindrome or not given string</h1>
+  <Script>
+    var count=0;
+    var msg = prompt("Enter the string for count the no of charectors in a string");
+    var orginal=msg;
+    console.log("Entered string " +  msg);
+    console.log(" The length of the eneter string :" + msg.length);
+    
+    for(var i=msg.length-1; i>= 0; i--)
+    {
+      
+     
+       console.log(msg[i]);
+     }
+     
+
+          
+
+     var reverse=" ";
+     for(var j=msg.length-1; j>= 0; j--)
+    {
+      reverse+=msg[j];
+      
+       console.log(msg[j]);
+     }
+     console.log("Reversed string : "+ reverse)
+
+     if(orginal==reverse)
+     {
+      console.log("Thi is palindrome string " + reverse)
+     }
+     else{
+        console.log("Thi is not palindrome string " + reverse)
+     }
+
+
+
+
+//   console.log("Tha number of charector along with space " + count);
+      
+ 
+// var countspace=0;
+//   for(var j=0;j<msg.length;j++)
+//   {
+//     if(msg[j]===' ')
+//   {
+//     countspace++;
+    
+//   }
+//   }
+
+//   var totalnumberofcharector=count;
+//   console.log("Tha total nuber of spaces : " + countspace);
+
+
+// console.log("Tha total nuber of charectors without spaces : " + totalnumberofcharector);
+  </Script>
+
+</body>
+
+</html>

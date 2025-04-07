@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice Exercise</title>
+  <link rel="stylesheet" href="cal.css" />
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+
+  <ul id="calc-container">
+    <li>Enter the First value: 
+      <input type="number" id="firstValue" required />
+    </li>
+    <li>Enter the Second value: 
+      <input type="number" id="secondValue" required />
+    </li>
+    <li class="btn-group">
+      <input type="button" value="Addition" onclick="displayResult('add')" />
+      <input type="button" value="Subtraction" onclick="displayResult('sub')" />
+      <input type="button" value="Multiplication" onclick="displayResult('mul')" />
+      <input type="button" value="Clear" onclick="clearResults()" />
+    </li>
+    <li id="resultBlock" style="display: none;">
+      <p><strong>Result:</strong> <span id="output"></span></p>
+    </li>
+  </ul>
+
+  <script src="cal.js"></script>
+</body>
+</html>

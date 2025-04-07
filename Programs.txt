@@ -5,7 +5,6 @@
 1. Given number reverse program
 2. Check the number palindrome or not
 3. sum of given number
-
 4. list of no of  palidrom number from geiven number
 5. read a number of user and check wther its aromstrong number or not
 6. W a P find total number digits in a given number
@@ -15,11 +14,11 @@
 10. list out the all prime numbers from given number
 11. reverse of given number
 12. sum of two numbers
-13. 
+
 
 
 array
-1. Read values dynamically into an array.
+1. Read values dynamically into an array.- 
 2. Find the sum of all numeric values in a given array.
 3. Find all even numbers in a given array.
 4. Find all odd numbers in a given array.
@@ -37,3 +36,10 @@ String
 4. WAP to find out total number palindrome number in given numbers
 5. WAP Reverse of the given String
 6. Check weather given string part of given string or not
+
+Json-
+1. WAP which takes can object as parameter iterates overate  
+    and returns all the key & corresponding values.
+
+Assisment : this keyword using wap program json object function emp details
+Assignment : Add, Mul,Division using unput methods and display the result in HTML page not for console
