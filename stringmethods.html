@@ -6,10 +6,7 @@
     <title>Pracrice exersize</title>  <!-- Title inside head -->
 
     <style>
-       
-            
-            
-        
+      
 
     </style>
 </head>
@@ -17,12 +14,29 @@
 <body>
 
    <Script>  
-   var msg ='Hello good morning every one';
-   console.log(msg);
+   var msg =prompt("Enter any string value");  // prompt box will appear and ask for input
+   console.log("User enetered string is:  " + msg);
+    count=0;
+    for(var i=0; msg[i] != null; i++)
 
+    {
+        count++;
+    }
+    console.log("Total characters (including spaces): " + count);
+    var spacecount=0;
+    for(var j=0; msg[j] != null; j++)
+    {
+        if(msg[j] == " ")
+        {
+            spacecount++;
+        }
+    }
 
+    console.log("Number of spaces: " + spaceCount);
 
-
+// Calculating the number of characters excluding spaces
+var result = count - spaceCount;
+console.log("Number of characters (excluding spaces): " + result);
 
      </Script>
 
