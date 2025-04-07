@@ -18,7 +18,7 @@
 
 
 array
-1. Read values dynamically into an array.
+1. Read values dynamically into an array.- 
 2. Find the sum of all numeric values in a given array.
 3. Find all even numbers in a given array.
 4. Find all odd numbers in a given array.
@@ -40,3 +40,6 @@ String
 Json-
 1. WAP which takes can object as parameter iterates overate  
     and returns all the key & corresponding values.
+
+Assisment : this keyword using wap program json object function emp details
+Assignment : Add, Mul,Division using unput methods and display the result in HTML page not for console

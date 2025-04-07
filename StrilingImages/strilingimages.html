@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .block {
+                border: 2px solid orange;
+                margin: 5px;
+                padding: 5px;
+            }
+            .block > div {
+                margin: 10px;
+            }
+            img {
+                width: 180px;
+                height: 180px;
+            }
+            .profilePic {
+                background-image: url('./images/spritingImage.png');
+                width: 170px;
+                height: 140px;
+                border: 1px solid #ccc;
+            }
+            .emp1 {
+                background-position: 2px 1px;
+            }
+            .emp2 {
+                background-position: -198px 2px;
+            }
+            .emp3 {
+                background-position: -51px -157px;
+            }
+            .emp4 {
+                background-position: -267px -160px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>
+            Employee Details
+        </h3>
+        <div class="block">
+            <div class="profilePic emp1"></div>
+            <div>Employee Name: Raj</div>
+            <div>Employee Age: 20</div>
+            <div>Gender: Male</div>
+        </div>
+        <div class="block">
+            <div class="profilePic emp2"></div>
+            <div>Employee Name: Meena</div>
+            <div>Employee Age: 25</div>
+            <div>Gender: Female</div>
+        </div>
+        <div class="block">
+            <div class="profilePic emp3"></div>
+            <div>Employee Name: Krish</div>
+            <div>Employee Age: 23</div>
+            <div>Gender: Male</div>
+        </div>
+        <div class="block">
+            <div class="profilePic emp4"></div>
+            <div>Employee Name: Teena</div>
+            <div>Employee Age: 22</div>
+            <div>Gender: Female</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>
+            Demonstrating DHTML operations 
+        </h3>
+        <div id="container"> </div>
+
+        <script>
+            alert("test")
+            window.alert("")
+            var max_users = 3000;
+            window.max_users = 3000;
+            var divTag = document.createElement("div");
+            divTag.setAttribute("class", 'container');
+            divTag.setAttribute("id", 'abc');
+            divTag.setAttribute("name", "userElement");
+            divTag.style.color = prompt("enter the color u would like");
+            divTag.style['font-size'] = '20px';
+
+            divTag.innerText =  prompt("enter user msg")
+
+            console.log(divTag);
+            document.getElementById("container").append(divTag);
+            // document.querySelector("#container").append(divTag)
+
+            console.log(window)
+
+            console.log(document);
+
+        </script>
+    </body>
+</html>
