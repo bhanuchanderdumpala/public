@@ -33,10 +33,17 @@
             .detailsContainer ol > li {
                 margin: 10px;
                 list-style: none;
-                background-color: #b3874c;
+                background-color: #c6d380;
                 padding: 10px;
             }
             ul, ol {
                 margin: 5px;
                 padding: 5px;
+            }
+            .detailsContainer > li {
+                float: left;
+            }
+        
+            .ratingContainer {
+                height: 30px;
             }

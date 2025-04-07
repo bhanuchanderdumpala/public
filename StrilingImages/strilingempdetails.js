@@ -9,7 +9,7 @@ var empdetails = [
             OfficeAddress :"Hyderabad"
         }, 
         
-        ]
+        ];
 
         var loadempdetails = ()=>
         {

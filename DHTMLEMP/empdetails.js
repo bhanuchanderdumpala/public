@@ -25,12 +25,12 @@ var empdetails = [
             olTag=document.createElement("ol");
 
             var li1=document.createElement("li");
-           var imgTag=document.createElement("img");
-                imgTag.setAttribute("src", empdetails.url); 
-                imgTag.style.width = "100px";
-                imgTag.style.height = "80px";
-                li1.append(imgTag);
-                olTag.append(li1);
+            var imgTag=document.createElement("img");
+            imgTag.setAttribute("src", empdetails.url); 
+            imgTag.style.width = "100px";
+            imgTag.style.height = "80px";
+            li1.append(imgTag);
+            olTag.append(li1);
 
                 var li2=document.createElement("li");
                 li2.innerText= "EmpName" + ": " + empdetails.EmpName;

@@ -1,95 +1,154 @@
-var productdetails = [
-           {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-            productName : "Dell Laptop",
-            prices : '70000',
-            manfacture : "Dell India Pvt Limited",
-            rating :"4.5/5"},
+var productDetails = [
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7mUg0gqaHwIkBVsJ23EbbJ5zuB7pdFn3EIg&s',
+        price: 13009,
+        name: 'Smart Phone',
+        manufacturer: 'Apple',
+        rating: '4.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSayeQYlSHIfCbMI2om2NRMwrqMgN6_cXug&s',
+        price: 13000,
+        name: 'Scandisk pendrive',
+        manufacturer: 'Sandisk',
+        rating: '2.5/5'                
+    },
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    },
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7mUg0gqaHwIkBVsJ23EbbJ5zuB7pdFn3EIg&s',
+        price: 13009,
+        name: 'Smart Phone',
+        manufacturer: 'Apple',
+        rating: '4.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSayeQYlSHIfCbMI2om2NRMwrqMgN6_cXug&s',
+        price: 13000,
+        name: 'Scandisk pendrive',
+        manufacturer: 'Sandisk',
+        rating: '2.5/5'                
+    },
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    },
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7mUg0gqaHwIkBVsJ23EbbJ5zuB7pdFn3EIg&s',
+        price: 13009,
+        name: 'Smart Phone',
+        manufacturer: 'Apple',
+        rating: '4.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSayeQYlSHIfCbMI2om2NRMwrqMgN6_cXug&s',
+        price: 13000,
+        name: 'Scandisk pendrive',
+        manufacturer: 'Sandisk',
+        rating: '2.5/5'                
+    },
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    },
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7mUg0gqaHwIkBVsJ23EbbJ5zuB7pdFn3EIg&s',
+        price: 13009,
+        name: 'Smart Phone',
+        manufacturer: 'Apple',
+        rating: '4.5/5'                
+    },
+    {
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSayeQYlSHIfCbMI2om2NRMwrqMgN6_cXug&s',
+        price: 13000,
+        name: 'Scandisk pendrive',
+        manufacturer: 'Sandisk',
+        rating: '2.5/5'                
+    },
+    {
+        url: 'https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full',
+        price: 24000,
+        name: 'Standard Laptop',
+        manufacturer: 'Sony',
+        rating: '3.5/5'                
+    }
+];
 
-            {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-            productName : "Dell Laptop",
-            prices : '70000',
-            manfacture : "Dell India Pvt Limited",
-            rating :"4.5/5"},
-
-            {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-            productName : "Dell Laptop",
-            prices : '70000',
-            manfacture : "Dell India Pvt Limited",
-            rating :"4.5/5"},
-
-            {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-                productName : "Dell Laptop",
-                prices : '70000',
-                manfacture : "Dell India Pvt Limited",
-                rating :"4.5/5"},
+var loadProductDetails = (product, index) => {
+    var mainLi = document.createElement("li");
+    var olTag = document.createElement('ol');
     
-                {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-                productName : "Dell Laptop",
-                prices : '70000',
-                manfacture : "Dell India Pvt Limited",
-                rating :"4.5/5"},
-    
-                {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-                productName : "Dell Laptop",
-                prices : '70000',
-                manfacture : "Dell India Pvt Limited",
-                rating :"4.5/5"},
+    var li1 = document.createElement('li');
+    var imgTag = document.createElement("img");
+    imgTag.setAttribute("src", product.url);
+    li1.append(imgTag);
+    olTag.append(li1);
 
-                {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-                    productName : "Dell Laptop",
-                    prices : '70000',
-                    manfacture : "Dell India Pvt Limited",
-                    rating :"4.5/5"},
-        
-                    {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-                    productName : "Dell Laptop",
-                    prices : '70000',
-                    manfacture : "Dell India Pvt Limited",
-                    rating :"4.5/5"},
-        
-                    {url : "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/latitude-14-7450-laptop-2-in-1/mg/notebook-latitude-14-7450-t-gray-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=696&qlt=100,1&resMode=sharp2&size=696,402&chrss=full",
-                    productName : "Dell Laptop",
-                    prices : '70000',
-                    manfacture : "Dell India Pvt Limited",
-                    rating :"4.5/5"},
+    var li2 = document.createElement("li");
+    li2.innerText = "Product Name : " + product.name;
+    olTag.append(li2);
 
-        ]
-            var loadProductdetails =(productdetails)=>{
+    var li3 = document.createElement("li");
+    li3.innerText = "Product Price : " + product.price;
+    olTag.append(li3);
 
-                var mainLi=document.createElement("li");
-                var olTag=document.createElement("ol");
-                
-                var li1=document.createElement("li");
-                var imgTag=document.createElement("img");
-                imgTag.setAttribute("src", productdetails.url); 
-                li1.append(imgTag);
-                olTag.append(li1);
+    var li4 = document.createElement("li");
+    li4.innerText = "Manufacturer : " + product.manufacturer;
+    olTag.append(li4);
 
-                var li2=document.createElement("li");
-                li2.innerText= "Product Name" + ": " + productdetails.productName;
-                olTag.append(li2);
+    var li5 = document.createElement("li");
+    li5.setAttribute("id", 'id_' + index);
+    li5.setAttribute("class", 'ratingContainer');
+    //li5.innerText = "Rating : " + product.rating;
+    olTag.append(li5);
+    mainLi.append(olTag);
 
-                var li3=document.createElement("li");
-                li3.innerText="Product Price" + ": " + productdetails.prices;
-                olTag.append(li3);
+    document.querySelector(".detailsContainer").append(mainLi);
 
-                
-                var li4=document.createElement("li");
-                li4.innerText="Rating" + ": " + productdetails.rating;
-                olTag.append(li4);
-
-                var li5=document.createElement("li");
-                li5.innerText="Manfacture" + ": " + productdetails.manfacture;
-                olTag.append(li5);
-
-                mainLi.append(olTag);
-
-                document.querySelector(".detailsContainer").append(mainLi);
-            }
+    // var ratingRefEle = '#id_' + index;
+    // addRatingStarsToContainer(product.rating, ratingRefEle);
+}
 
 
-            for(var i=0;i<productdetails.length;i++)
-            {
-                loadProductdetails(productdetails[i]);
-            }
-            
+for (var i = 0 ; i < productDetails.length; i++) {
+    loadProductDetails(productDetails[i], i);
+}
