@@ -113,7 +113,7 @@ var productDetails = [
     }
 ];
 
-var loadProductDetails = (product, index) => {
+var loadProductDetails = (product,index) => {
     var mainLi = document.createElement("li");
     var olTag = document.createElement('ol');
     
@@ -138,14 +138,17 @@ var loadProductDetails = (product, index) => {
     var li5 = document.createElement("li");
     li5.setAttribute("id", 'id_' + index);
     li5.setAttribute("class", 'ratingContainer');
-    //li5.innerText = "Rating : " + product.rating;
+    li5.innerText = "Rating : " + product.rating;
     olTag.append(li5);
     mainLi.append(olTag);
 
     document.querySelector(".detailsContainer").append(mainLi);
 
-    // var ratingRefEle = '#id_' + index;
-    // addRatingStarsToContainer(product.rating, ratingRefEle);
+    var ratingRefEle = '#id_' + index;
+    addRatingStarsToContainer(product.rating, ratingRefEle);
+    console.log("Product .rating"+product.rating+ ratingRefEle);
+    
+
 }
 
 
