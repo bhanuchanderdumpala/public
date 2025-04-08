@@ -21,7 +21,7 @@
                 text-align: center;
                 font-size: 40px;
                 font-weight: bold;
-                background-color: rgb(172, 244, 192);
+                background-color: rgb(200, 127, 38);
                 margin: 5px;
                 padding: 10px;
             }
@@ -33,7 +33,7 @@
             .detailsContainer ol > li {
                 margin: 10px;
                 list-style: none;
-                background-color: #c6d380;
+                background-color: #6fee97fe;
                 padding: 10px;
             }
             ul, ol {
@@ -45,5 +45,9 @@
             }
         
             .ratingContainer {
-                height: 30px;
+                height: 41px;
+                font-style: italic;
+                font-weight:bold;
+                color: #ec2c0b;
+
             }

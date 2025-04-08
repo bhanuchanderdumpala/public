@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="container">
+            click here
+        </div>
+        <div id="msg"></div>
+        <script>
+            var showMsg = () => {
+                console.log("From show msg method");
+            }
+
+            var eventType = prompt('enter event type')
+            
+            document.querySelector("#container").addEventListener(eventType, showMsg);
+
+            var ptag = document.createElement("p");
+            ptag.innerText = 'hello am a new msg';
+            ptag.addEventListener("click", () => {
+                console.log("from click on p tag");
+            })
+            document.querySelector("#msg").append(ptag)
+
+        </script>
+    </body>
+</html>
