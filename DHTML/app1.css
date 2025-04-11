@@ -65,3 +65,8 @@ body {
     display: none;
     
   }
+  .errMsg {
+    color: red;
+    font-size: 12px;
+    display: none;
+}

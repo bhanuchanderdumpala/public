@@ -12,10 +12,11 @@
 
   <ul>
     <li>Enter the First value:
-      <input type="text" id="firstValue" />
+      <input type="text" id="firstValue" maxlength="3" onkeypress="return validateTextContent(event)" />
+      <div class="errMsg" id="firstErr" onkeypress="return validateTextContent(event)"> Only numbers are allowed</div>
     </li>
     <li>Enter the Second value:
-      <input type="text" id="secondValue" />
+      <input type="text" id="secondValue" maxlength="3" onkeypress="return validateTextContent(event)"/>
     </li>
 
     <li class="button-group">
@@ -65,6 +66,30 @@
       document.getElementById("mulResult").innerText = "";
       document.getElementById("resultblock").style.display = "none";
     }
+    var validateTextContent = (event) => {
+      console.log(event);
+      if(event.keyCode >=48 && event.keyCode <= 58)
+        {
+          return true;
+
+        }
+        else {
+          return false;
+
+        }
+        if ("firsstvalue" == '') {
+        document.querySelector("#firstErr").style.display = 'block';
+        return;
+    } else {
+        document.querySelector("#firstErr").style.display = 'none';
+    }
+
+      }
+      
+
+
+
+
   </script>
 
 </body>

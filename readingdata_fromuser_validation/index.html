@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <ul>
+            <li>
+                Enter first value: 
+                <input type="text" id="fval" maxlength="3" onkeypress="return validateTextContent(event)">
+            </li>
+            <li>
+                Enter Second value: 
+                <input type="text" id="sval" maxlength="3" onkeypress="return validateTextContent(event)">  
+            </li>
+            <li>
+                <input type="button" value="Get Add" onclick="doTheSum(event)">
+            </li>
+            <li id="resultBlock">
+                The sum of values is 
+                <span>...</span>
+            </li>
+        </ul>
+        <script>
+            var doTheSum = (event) => {
+                console.log(event);
+                var firstVal = document.querySelector("#fval").value;
+                firstVal = parseInt(firstVal);
+                var secondVal = document.querySelector("#sval").value;
+                secondVal = parseInt(secondVal);
+                var result = firstVal + secondVal;
+
+                document.querySelector('span').innerText  = result;
+            
+                document.querySelector("#resultBlock").style.display = 'block';
+            }
+
+            var validateTextContent = (event) => {
+                console.log(event);
+                if ((event.keyCode >= 97 && event.keyCode <= 122) || (event.keyCode >= 65 && event.keyCode <= 90)) {
+                    return false; // not allowing the capital/samll letters
+                 } else {
+                     return true;
+                 }
+
+                if (event.keyCode >= 48 && event.keyCode <= 57) {
+                    return true; //it allowing only numbers
+                } else {
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
