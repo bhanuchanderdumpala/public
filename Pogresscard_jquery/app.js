@@ -3,7 +3,7 @@ var generateProgressCard = () => {
     // studenDetails.name = document.querySelector("#sname").value;
 
     studenDetails.name = $("#sname").val();
-    studenDetails.age = $("sage").val();
+    studenDetails.age = $("#sage").val();
     studenDetails.marks = [];
     for (var i = 0; i < 5; i++) {
         var id = '#m' + (i + 1);
