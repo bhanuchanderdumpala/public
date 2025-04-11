@@ -1,6 +1,6 @@
 h3 {
     text-align: center;
-    color: gray;
+    color: rgb(233, 98, 98);
     border: 2px solid;
     padding: 10px;
 }
@@ -9,23 +9,24 @@ ul {
     width: 700px;
     margin: 10px auto;
     padding: 10px;
-    background-color: #ccc;
+    background-color: #aec151;
 }
 
 li {
     list-style: none;
     border: 1px solid;
     margin: 10px;
-    background-color: #fff;
+    background-color: #459ee3;
     padding: 10px;
 }
 
 .marksContainer > input {
     width: 60px;
+    background-color: rgb(159, 172, 172);
 }
 
 .title {
     text-align: center;
     font-weight: bold;
-    color: green;
+    color: rgb(239, 18, 136);
 }
