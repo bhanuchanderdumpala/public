@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            console.log("page got loaded");
+
+
+            var showWelcomeMessage = () => {
+                console.log("Thanks for using our webapge")
+            }
+
+            // showWelcomeMessage();
+
+            // setTimeout(showWelcomeMessage, 5000);
+
+            setTimeout( () => {
+                console.log("i got invoked")
+            }, 5000);
+        </script>
+    </body>
+</html>
+
+document.addEventListener("domcontentloaded", () => {
+    
+})
