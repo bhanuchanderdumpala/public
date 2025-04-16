@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var book1 = {
+                book_name: 'My Dreams',
+                book_price: 2000,
+                discountPercent: 5,
+                seller: 'abc communications',
+                showDiscoundPrice() {
+                    this.discountedPrice = this.book_price - (this.book_price * this.discountPercent) / 100;
+                },
+                displayBookDetails() {
+                    console.log("book name " + this.book_name);
+                    console.log("Book Price " + this.book_price);
+                    console.log("Book Seller " + this.seller);                    
+                }
+            };
+            var book2 = {
+                book_name: 'My Current Goals',
+                book_price: 1300,
+                discountPercent: 15,
+                seller: 'Test publishers ',
+                showDiscoundPrice() {
+                    this.discountedPrice = this.book_price - (this.book_price * this.discountPercent) / 100;
+                },
+                displayBookDetails() {
+                    console.log("book name " + this.book_name);
+                    console.log("Book Price " + this.book_price);
+                    console.log("Book Seller " + this.seller);                    
+                }
+            };
+            var book3 = {
+                book_name: 'My new journey to the world',
+                book_price: 3200,
+                discountPercent: 3,
+                Seller: 'Indian publications',
+                showDiscoundPrice() {
+                    this.discountedPrice = this.book_price - (this.book_price * this.discountPercent) / 100;
+                },
+                displayBookDetails() {
+                    console.log("book name " + this.book_name);
+                    console.log("Book Price " + this.book_price);
+                    console.log("Book Seller " + this.seller);                    
+                }
+            };
+
+
+            class Book {
+                constructor(details) {
+                    console.log("from constructor");
+                    this.book_name = details.bookname;
+                    this.book_price = details.price;
+                    this.discountPercent = details.discount;
+                    this.seller = details.sellername;
+                }
+                getDiscoundPrice(a) {
+                    this.discountedPrice = this.book_price - (this.book_price * this.discountPercent) / 100;
+                }
+                displayBookDetails() {
+                    this.getDiscoundPrice();
+                    console.log("book name " + this.book_name);
+                    console.log("Book Price " + this.book_price);
+                    console.log("Book Seller " + this.seller);   
+                    console.log("Final price after discont " + this.discountedPrice);                 
+                }
+            }
+            
+            var data = {bookname: "My new Dreams", price: 1200, discount: 14, sellername: 'abc Seller'};
+            var p1 = new Book(data); // instantiating|creating obj for a class
+            //p1.displayBookDetails();
+            console.log(p1);
+
+            // var p2 = new Book("My new roles", 1700, 4, 'abc Seller'); // instantiating|creating obj for a class
+            // //p2.displayBookDetails();
+            // console.log(p2);
+
+            // var p3 = new Book("My new Journey", 1390, 7, 'abc Seller'); // instantiating|creating obj for a class
+            // //p3.displayBookDetails();
+            // console.log(p3);
+        </script>
+    </body>
+</html>
