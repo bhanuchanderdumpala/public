@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var name = 'Raj';
+            var age = 24;
+            var userLocation = 'Hyderabad';
+            var compnayDetails= {
+                name: 'Abc Company',
+                country: {
+                    name: 'India'
+                }
+            }
+
+            var msg = 'Hello Mr ' + name + ' ur age is ' + age + ' User locaiton is ' + userLocation + ' and compnay details ' + compnayDetails.country.name;
+
+            var msg = `Hello Mr. ${name}  and your age is ${age}, location is ${userLocation} and compnay details are ${compnayDetails.country.name}`;            
+
+            console.log(msg);
+
+            // console.log(msg);
+
+        </script>
+
+
+    </body>
+</html>

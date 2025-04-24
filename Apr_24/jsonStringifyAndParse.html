@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var data1 = {
+                name: 'Raj',
+                age: 20,
+                gender: 'Male'
+            };
+
+            console.log(data1)
+            var data2 = JSON.stringify(data1);
+            console.log(data2);
+
+            var data3 = JSON.parse(data2);
+
+            console.log(data3);
+            // console.table(data1);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>
+            Demonstrating ajax calls
+        </h3>
+        product name: <span></span>
+        <input type="button" value="Get Data" onclick="getData()">
+        <script>
+            var getData = () => {
+                var dataUrl = 'https://fakestoreapi.com/products';
+
+                // fetch 
+                fetch(dataUrl).then((response) => response.json()).then((result) => {
+                   console.log("success");
+                   console.log(result);
+                   document.querySelector("span").innerText = result[0].title;
+                }).catch(() => {
+                    console.log("error while hittin api")
+                })
+            }
+        </script>
+    </body>
+</html>
