@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating Inheritance
+        </title>
+    </head>
+    <body>
+        <script>
+            class CollegeDetails {
+                constructor() {
+                    this.collegeName = 'Abc College';
+                    this.collegeLocation = 'Hyderabad';
+                    this.collegeRank = 12;
+                }
+                displayCollegeDetails() {
+                    var z = 100;
+                    console.log("College name is " + this.collegeName);
+                    console.log("College Location " + this.collegeLocation);
+                    console.log("Rank " + this.collegeRank);
+                }
+            }
+            // var c1 = new CollegeDetails();
+            // c1.displayCollegeDetails();
+
+            class StudentDetails extends CollegeDetails {
+                constructor(data) {
+                    super();
+                    this.sname = data.name;
+                    this.sage = data.age;
+                    this.qualification = data.qualification;
+                    
+                }
+                displayStudentDetails() {
+                    console.log("STudent name is " + this.sname);
+                    console.log("Student age is " + this.sage);
+                    console.log("Student Qualificaiton is " + this.qualification);
+                    this.displayCollegeDetails();
+                }
+            }
+
+            var s1 = new StudentDetails({name: 'Raj', age: 24, class: 'MCA'});
+            s1.displayStudentDetails();
+        </script>
+    </body>
+</html>
