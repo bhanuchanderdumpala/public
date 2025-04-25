@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="../lib/axios.js"></script>
+        <script src="../lib/jquery.js"></script>
+    </head>
+    
+    <body>
+        
+       Practise for call the API from web site
+    
+    <input type="button" value="API DATA for list of space crafts" onclick="getdata()" >
+    <table width="80%"  cellspacing="5px" cellpadding="5px" border="3px solid" >
+        <thead>
+            <tr>
+            <th>S.No</th>
+            <th>ID</th>
+            <th>Spacecraft Name</th>
+             
+            
+        </tr>
+        </thead>
+        <tbody id="productData"></tbody>
+        </table>
+
+           <script>
+
+            var getdata = ()=>{
+                axios.get('https://isro.vercel.app/api/spacecrafts').then((result)=>{
+                console.log(result);
+                var spaceinfo=result.data.spacecrafts;
+                spaceinfo.sort((a, b) => a.name.localeCompare(b.name));
+               
+                for(var i=0;i<spaceinfo.length;i++){
+
+                    console.log(spaceinfo)
+                    var tr=$("<tr/>");
+                    tr.append($("<td/>").text(i+1));
+                    tr.append($("<td/>").text(spaceinfo[i].id));
+                    tr.append($("<td/>").text(spaceinfo[i].name));
+
+                    $("#productData").append(tr);
+
+
+
+                }
+
+
+                }).catch((error)=>{}
+                );
+            
+
+            }
+
+
+
+
+           </script>
+           </body>
+</html>

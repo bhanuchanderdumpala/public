@@ -16,7 +16,7 @@ class StudenDetails {
     getGrade() {
         this.grade = '';
         if (this.avg >= 60) {
-            this.grade = 'PAssed'
+            this.grade = 'Passed'
         } else {
             this.grade = 'Failed';
         }
