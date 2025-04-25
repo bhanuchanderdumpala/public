@@ -4,25 +4,81 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script src="../lib/axios.js"></script>
+        <script src="../lib/jquery.js"></script>
     </head>
+    <style>
+        th{
+            background-color: aquamarine;
+        }
+        tr{
+            background-color: lemonchiffon;
+        }
+
+    </style>
     <body>
-        <h3>
-            Demonstrating ajax calls
+        <h3 font-style:bold aria-flowto="result">
+            API calls getting the data 
         </h3>
-        product name: <span></span>
-        <input type="button" value="Get Data" onclick="getData()">
+         <span></span>
+        <input type="button" value="Get Data from API" onclick="getData()">
+        <table width="100%"  cellspacing="5px" cellpadding="5px" border="3px solid">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+             <th>Description</th>
+            <th>Category</th>
+            <th>Rating</th>
+            <th>Count</th>
+            <th>Image</th>
+        </tr>
+        </thead>
+        <tbody id="productData"></tbody>
+        </table>
         <script>
             var getData = () => {
-                var dataUrl = 'https://fakestoreapi.com/products';
+                //var dataUrl = 'https://fakestoreapi.com/products';
 
                 // fetch 
-                fetch(dataUrl).then((response) => response.json()).then((result) => {
-                   console.log("success");
-                   console.log(result);
-                   document.querySelector("span").innerText = result[0].title;
-                }).catch(() => {
-                    console.log("error while hittin api")
-                })
+                // fetch(dataUrl).then((response) => response.json()).then((result) => {
+                //    console.log("success");
+                //    console.log(result);
+                //    document.querySelector("span").innerText = result[0].title;
+                // }).catch(() => {
+                //     console.log("error while hittin api")
+                // })
+
+        axios.get('https://fakestoreapi.com/products').then((result) => {
+        console.log(result);
+        // var centersInfo = result.data.centres;
+        // loadDataToGrid(centersInfo)
+        // console.log(centersInfo);
+        var productsinfo=result.data;
+        for(var i=0;i<productsinfo.length;i++)
+        {
+            //console.log(productsinfo);
+            var tr = $("<tr/>");
+
+            tr.append($("<td/>").text(productsinfo[i].id));
+            tr.append($("<td/>").text(productsinfo[i].title));
+            tr.append($("<td/>").text(productsinfo[i].price));
+            tr.append($("<td/>").text(productsinfo[i].description));
+            tr.append($("<td/>").text(productsinfo[i].category));
+            tr.append($("<td/>").text(productsinfo[i].rating.rate));
+            tr.append($("<td/>").text(productsinfo[i].rating.count));
+            
+            var imgTag = $("<img>").attr("src", productsinfo[i].image).css({ width: "50px", height: "50px" });
+            tr.append($("<td/>").append(imgTag));
+
+            $("#productData").append(tr);
+
+
+        }
+    }).catch((err) => {
+        
+    });
             }
         </script>
     </body>
