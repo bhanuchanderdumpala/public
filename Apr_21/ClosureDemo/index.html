@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="app.css">
+        <script src="app.js"></script>
+        <script src="lib/mathUtils.js"></script>
+    </head>
+
+    <body>
+        <ul>
+            <li>
+                <input type="text" placeholder="Enter First value" id="fval">
+            </li>
+            <li>
+                <input type="text" placeholder="Enter Second value" id="sval">
+            </li>
+            <li>
+                <input type="button" value="Do Addition" onclick="dooperation('add')">
+                <input type="button" value="Do Division" onclick="dooperation('div')"> 
+                <input type="button" value="Do Substraction" onclick="dooperation('sub')">
+                <input type="button" value="Do Multiplication" onclick="dooperation('mul')">
+                <input type="button" value="Get Count" onclick="getCount()">
+            </li>
+            <li id="rblock">
+
+            </li>
+            <li id="countBlock">
+                
+            </li>
+        </ul>
+    </body>
+</html>

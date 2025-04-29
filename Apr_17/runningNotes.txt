@@ -1,0 +1,82 @@
+Object 
+Class
+Inheritance
+Data encapsulation
+Data abstraction 
+Polymorphism
+
+---------------------
+
+class A { // Base class, Parent class 
+    ... 
+    ... 
+}
+
+class B extends A{ // Dereived class, Child class
+    ...
+    .... 
+}
+
+extends
+
+class Test {
+    constructor(a, b) {
+        ...  
+    }
+    displayDetails() {
+        ... 
+    }
+}
+
+class Sample extends Test {
+    constructor() {
+       super(20, 40)
+
+    }
+    showDetails() {
+
+    }
+}
+
+var s1 = new Sample();
+
+Inheritance:
+
+    Single level
+    Multilevel 
+    Multiple 
+    Hybrid 
+
+
+    function addValues(int a, int b) {
+
+    }
+
+    function addValues(float a, float b) {
+
+    }
+
+    function addValues(int a, float b) {
+
+
+    }
+
+    addValues(10, 2.5);
+    addValues(3.6, 4.5)
+
+    -----------------------------------------
+
+    function addValues(a, b) {
+
+    }
+
+    function addValues(a, b) {
+        
+    }
+
+    function addValues(a, b, c) {
+        
+    }
+-------------------------------------
+
+Closure

@@ -1,0 +1,32 @@
+h3 {
+    text-align: center;
+    color: rgb(233, 98, 98);
+    border: 2px solid;
+    padding: 10px;
+}
+
+ul {
+    width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #aec151;
+}
+
+li {
+    list-style: none;
+    border: 1px solid;
+    margin: 10px;
+    background-color: #459ee3;
+    padding: 10px;
+}
+
+.marksContainer > input {
+    width: 60px;
+    background-color: rgb(159, 172, 172);
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(239, 18, 136);
+}
