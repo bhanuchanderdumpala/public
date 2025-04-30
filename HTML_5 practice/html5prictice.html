@@ -8,7 +8,7 @@
   <style>
     
     body {
-      background-color: #f2f2f2;
+      background-color: #72bed6;
       
       display: flex;
       justify-content: center; 
@@ -18,7 +18,7 @@
     }
 
     .form-box {
-      background-color: rgba(52, 175, 138, 0.671);
+      background-color: rgba(162, 67, 148, 0.671);
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -85,10 +85,10 @@
    
     document.addEventListener("DOMContentLoaded", function () {
     
-      document.getElementById("name").value = localStorage.getItem("name") || "";
-      document.getElementById("email").value = localStorage.getItem("email") || "";
-      document.getElementById("phone").value = localStorage.getItem("phone") || "";
-      document.getElementById("password").value = localStorage.getItem("password") || "";
+      document.getElementById("name").value = localStorage.getItem("name");
+      document.getElementById("email").value = localStorage.getItem("email");
+      document.getElementById("phone").value = localStorage.getItem("phone");
+      document.getElementById("password").value = localStorage.getItem("password");
 
     });
 

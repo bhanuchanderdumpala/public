@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login with LocalStorage</title>
+  
+  <style>
+    body {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-box {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .remember-box {
+      margin: 10px 0;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+
+    #welcomeblock {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h2>Login</h2>
+    <label for="userName">Username</label>
+    <input type="text" id="userName" placeholder="Enter Username" required />
+
+    <label for="pass">Password</label>
+    <input type="password" id="pass" placeholder="Enter Password" required />
+
+    <div class="remember-box">
+      <input type="checkbox" id="remember" />
+      <label for="remember">Remember Me</label>
+    </div>
+
+    <input type="button" value="Login" onclick="saveDetails()" />
+    <div id="welcomeblock" style="display: none;"></div>
+  </div>
+<script> 
+    // Load data from localStorage on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      var uname = localStorage.getItem('user_name');
+      var pass = localStorage.getItem('pass');
+
+      if (uname && pass) {
+        document.querySelector("#userName").value = uname;
+        document.querySelector("#pass").value = pass;
+        document.querySelector("#remember").checked = true;
+        welcomeMessage(uname);
+      }
+    });
+
+    // Save data to localStorage on login
+    function saveDetails() {
+      var username = document.querySelector("#userName").value;
+      var password = document.querySelector("#pass").value;
+      var remember = document.querySelector("#remember").checked;
+
+      if (remember) {
+        localStorage.setItem('user_name', username);
+        localStorage.setItem('pass', password);
+      } else {
+        localStorage.removeItem('user_name');
+        localStorage.removeItem('pass');
+      }
+
+      welcomeMessage(username);
+    }
+
+    // Show welcome message
+    function welcomeMessage(uname) {
+      var msg = `Thanks for Logging In Mr/Mrs. ${uname}`;
+      var block = document.querySelector("#welcomeblock");
+      block.innerText = msg;
+      block.style.display = 'block';
+    }
+ 
+</script>
+  
+
+</body>
+</html>
