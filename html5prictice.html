@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form with Local Storage</title>
+
+  <style>
+    
+    body {
+      background-color: #f2f2f2;
+      
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-box {
+      background-color: rgba(52, 175, 138, 0.671);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <form class="form-box" onsubmit="return validateForm()">
+    <h2>Login Form for Local storage</h2>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="text" id="email" placeholder="Enter your email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="6–10 characters" required>
+
+    <label for="phone">Mobile Number</label>
+    <input type="text" id="phone" placeholder="Enter 10-digit mobile number" required>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+   
+    document.addEventListener("DOMContentLoaded", function () {
+    
+      document.getElementById("name").value = localStorage.getItem("name") || "";
+      document.getElementById("email").value = localStorage.getItem("email") || "";
+      document.getElementById("phone").value = localStorage.getItem("phone") || "";
+      document.getElementById("password").value = localStorage.getItem("password") || "";
+
+    });
+
+    
+    function validateForm() {
+      var name = document.getElementById("name").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var password = document.getElementById("password").value.trim();
+      var phone = document.getElementById("phone").value.trim();
+
+      // Name validation
+      if (name === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+
+      // Email validation
+      if (email === "" || !email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      // Password validation
+      if (password.length < 6 || password.length > 10) {
+        alert("Password must be 6 to 10 characters long.");
+        return false;
+      }
+
+      // Phone number validation
+      if (phone.length !== 10 || isNaN(phone)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return false;
+      }
+
+      // Save valid data to localStorage
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("phone", phone);
+      localStorage.setItem("password", password);
+
+      alert("Form submitted successfully! Your data is saved in local storage.");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
