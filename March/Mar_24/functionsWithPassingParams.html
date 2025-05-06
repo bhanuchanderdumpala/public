@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <script>
+            
+            var readValues = () => { // Calling function 
+                var a1, a2;
+                a1 = prompt("enter value from a1"); // 20
+                a2 = prompt("Enter value for a2"); // 80
+                a1 = parseInt(a1);
+                a2 = parseInt(a2);
+                getTotal(a1, a2); // a1, a2 becomes parameters  // getTotal(20, 80)
+                console.log("done");
+            }
+
+            var getTotal = (a1, p2) => { // Called function  // a1 = 20, p2 = 80
+                var result = a1 + p2;
+                console.log("The sum is " + result);
+            }
+            readValues();
+            
+            
+        </script>
+    </body>
+</html>

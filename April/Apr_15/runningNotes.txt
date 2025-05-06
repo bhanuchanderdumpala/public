@@ -1,0 +1,25 @@
+try {
+    .
+    .
+    .
+    .
+    try {
+        ... 
+
+    }
+    catch() {
+
+    }
+}
+
+User Defined Exceptions
+
+throw, throws 
+
+OOPs 
+    Object 
+    Class 
+    Inheritance
+    Data abstraction 
+    DAta encapsulation 
+    Polymorphism

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating Drag and Drop
+        </title>
+        <style>
+            .container {
+                border: 2px solid;
+                width: 700px;
+                height: 450px;
+                padding: 10px;
+                margin: 10px auto;
+            }
+            img {
+                width: 150px;
+                height: 145px;
+                margin: 10px;
+            }
+            .block {
+                border: 2px solid;
+                width: 120px;
+                height: 120px;
+                text-align: center;
+                background-color: yellow;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" ondragover="elementDragOver(event)" ondrop="elementGotDropped(event)"></div>
+        <img id="prod_1" src="https://media.gcflearnfree.org/content/55e0696b1496fdb039ceeecd_01_17_2014/Buttons_laptop_callout.jpg" alt="" draggable="true" ondragstart="dragIsStarted(event)">
+        <img id="prod_2" src="https://m.media-amazon.com/images/I/61BRKVOc4QL.jpg" alt="" draggable="true" ondragstart="dragIsStarted(event)">
+        <img id="prod_3" src="https://m.media-amazon.com/images/I/614aiM56siL._AC_UY1000_.jpg" alt="" draggable="true" ondragstart="dragIsStarted(event)">
+        <div class="block" id="test" draggable="true" ondragstart="dragIsStarted(event)">content</div>
+        <script>
+            var productId;
+            var dragIsStarted = (event) => {
+                console.log("Drag got started");
+                productId = event.target.getAttribute('id');
+                console.log(productId);
+
+            }
+
+            var elementGotDropped = (event) => {
+                productId = '#' + productId;
+                event.preventDefault();
+                document.querySelector(".container").append(document.querySelector(productId));
+                console.log("Element got dropped");
+                
+            }
+
+            var elementDragOver = (event) => {
+                event.preventDefault();
+                console.log("From Drag over...");
+            }
+        </script>
+    </body>
+</html>

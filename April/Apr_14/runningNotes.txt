@@ -1,0 +1,74 @@
+exception handling 
+
+closure 
+
+Oops 
+-------------------
+
+Exception Handling 
+
+    Error - 
+
+        Compile Time error 
+
+
+        Runtime errors 
+
+
+        compiler 
+            1. check for all syntactical errors 
+            2. convert to system understandable language
+
+            var a = 90
+            var a 90
+
+            if (true) {
+                b = 100
+            }
+
+            if true 
+                b = 100
+        Interpreter/execution:
+
+                Error - exception
+                Runtime errors / runtime exceptions 
+
+-----------------------------------------------------
+Exception handling  
+    try 
+    catch 
+    finally 
+    throw 
+    throws 
+
+    ------------------
+
+    try block -> add all the set of statement in which there is a chance of getting runtime error, under try block
+
+        1. every try block should have either catch or finally block 
+
+        try {
+            /// 
+            ///
+        } catch() {
+            /// code to handle error been raised in try block
+        } finally {
+            /// code which for sure need to get executed, irrelevant of whether there is an exception been raised or not..
+        }
+
+-----------------
+
+    sart system 
+    open the room
+
+    try {
+        8:30 if faculty comes
+            start the sytems 
+            class gets started 
+            class gets finished 
+    } catch(err) {
+        inform the students / with msg/mail
+    } finally {
+        shutdown system 
+        close the room
+    }

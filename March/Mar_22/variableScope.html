@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Scope of variable 
+            
+
+            let maxUsers = 10;
+            var a = 100; // Global scope / public 
+            console.log("value of a is " + a);
+            function displayDetails() {
+                const totalNoOfRegistrations = 10000;
+                var b = 200; // Private/module scope 
+                console.log("value of b is " + b);
+                console.log("value of a is " + a);
+            }
+            function displayInfo() { // Module
+                var c = 300;
+                console.log("value of c is " + c);
+                console.log("value of a is " + a);
+            }
+
+            displayDetails();
+            displayInfo();
+
+            if (true) { // Block
+                let k = 1000;
+                console.log("k value is " + k);
+            }
+
+            totalNoOfRegistrations++;
+            // console.log("k value is " + k);
+
+            // console.log("value of b is " + b);
+        </script>
+    </body>
+</html>

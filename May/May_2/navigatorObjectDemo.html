@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>
+            Demonstratign 'navigator' objecrt
+        </h3>
+        <script> 
+        console.log(navigator);
+            var crntBrowser = navigator.userAgentData.brands[0].brand;
+            if (crntBrowser == 'Google Chrome') {
+
+                alert("Thanks for using Chrome browser");
+            } else {
+
+                 alert("Please switch to Chrome browser for faster experience");
+            }
+        </script>
+    </body>
+</html>

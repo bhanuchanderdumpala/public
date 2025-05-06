@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function addValues(a, b) {
+                console.log("From 1st method");
+            }
+
+            function addValues(a, b) {
+                console.log("From 2nd method");
+            }   
+
+            function addValues(a , b, c) {
+                console.log("From 3rd method");
+            }
+
+            function addValues() {
+                console.log("From 4th method");
+            }
+
+            addValues(); // 4th
+            addValues(10, 20); // 1
+            addValues(10, 20, 30); // 3
+            addValues(2.4 ,5.6); // 2
+        </script>
+    </body>
+</html>

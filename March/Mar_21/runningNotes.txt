@@ -1,0 +1,52 @@
+Variable Hoisting 
+
+
+--------------------
+
+declaring variabels in other progm lngs 
+
+    .
+    int a = 90;
+    int b =99;
+    float avg = 100;
+    char a = 'c';
+    int count;
+    ..
+    ...
+    .
+    .
+    ..
+    ..
+    count = 1000;
+    ..
+-------------
+
+var a = 90;
+var b = 100;
+..
+.
+.
+var name = ''teena'
+.
+.
+.
+.
+var c = 90;
+---------------------
+
+var a = 90;
+var b = 100;
+var name, c;
+..
+.
+.
+name = ''teena'
+.
+.
+.
+.
+ c = 90;
+
+ ---------------------------
+
+ Functions 

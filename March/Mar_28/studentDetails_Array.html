@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var sname = 'RAj';
+            var age = 20;
+            var gender = 'Male';
+            // var m1 = 90;
+            // var m2 = 66;
+            // var m3 = 99;
+            // var m4 = 67;
+            // var m5 = 100;
+            var marks = [90, 66, 99, 67, 100];
+
+            var total = 0;
+            for (var i = 0 ; i < marks.length; i++) {
+                total += marks[i];
+            }
+            var avg = total / 5;
+
+            var grade = '';
+            if (avg >= 40) {
+                grade = 'PAssed';
+            } else {
+                grade = 'You have a surprise';
+            }
+
+            console.log("Student details");
+            console.log("NAme " + sname);
+            console.log("Total is " + total);
+            console.log("Avg is " + avg);
+            console.log("GRade is " + grade);
+        </script>
+    </body>
+</html>

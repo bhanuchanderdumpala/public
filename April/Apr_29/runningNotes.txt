@@ -1,0 +1,14 @@
+Symbol 
+
+    Github 
+        Git client
+            git desktop - GUI 
+            Git Bash - CUI 
+            Git ui 
+            Git tortise 
+
+--------------------------------
+
+HTML 5 & CSS 3
+
+        localStorage and sessionStorage

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var abc = {};
+            var studentDetails1 = [ 20, true, [23, 44, 55], "Raj"];
+
+            console.log(studentDetails1);
+
+            console.log("STudent name is " + studentDetails1[0]);
+
+            var studentDetails2 = {
+                'isFeepaid' : true,
+                
+                "age": 20,
+                marks: [23, 44, 55],
+                'sname': 'Raj',
+                'isFeepaid': false
+            };
+            delete studentDetails2.age;
+            studentDetails2.sname = 'Prasad';
+            console.log(studentDetails2);
+            console.log("STudent name is " + studentDetails2.sname);
+        </script>
+    </body>
+</html>

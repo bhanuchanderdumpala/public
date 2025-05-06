@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            var sname = 'Raj'
+            var sage = 20;
+            var sgender = 'male'
+          
+
+            var studentDetails = ["Raj", 20, 'Male', [90, 66, 99, 67, 100], 0, 0, ''];
+
+            // var studentDetails = [];
+            // studentDetails[0] = prompt("enter valur for std name");
+            // studentDetails[1] = prompt("enter age");
+            // studentDetails[2] = prompt("enter gender");
+            // studentDetails[3] = [];
+            // for (var i = 0 ; i < 5; i++) {
+            //     studentDetails[3][i] = prompt("enter marks");
+            // }
+
+            // console.log(studentDetails);
+
+            console.log(studentDetails);
+            
+            for (var i = 0 ; i < studentDetails[3].length; i++) {
+                studentDetails[4] += studentDetails[3][i];
+            }
+            studentDetails[5] = studentDetails[4] / studentDetails[3].length;
+
+            if (studentDetails[5] >= 40) {
+                studentDetails[6] = 'PAssed';
+            } else {
+                studentDetails[6] = 'You have a surprise';
+            }
+
+            console.log("Student details");
+            console.log("NAme " + studentDetails[0]);
+            console.log("Total is " + studentDetails[4]);
+            console.log("Avg is " + studentDetails[5]);
+            console.log("GRade is " + studentDetails[6]);
+        </script>
+    </body>
+</html>

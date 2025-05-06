@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .tableContainer {
+                border: 1px solid;
+                width: 900px;
+                height: 500px;
+            }
+            .row div,
+            .headrow div {
+                border: 1px solid;
+                width: 140px;
+                margin: 5px;
+                padding: 10px;
+                display: inline-block;
+                text-align: center;
+                
+            }
+            .headrow div {
+                font-weight: bold;
+            }
+            .mycustomwidh {
+                width: 290px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>
+            Tables through div tag
+        </h3>
+        <div class="tableContainer">
+            <div class="headrow">
+                <div>Sno </div>
+                <div>Name</div>
+                <div>Age</div>
+                <div>Location</div>
+                <div>Organization name</div>
+            </div>
+            <div class="row">
+                <div>1</div>
+                <div>Raj</div>
+                <div>20</div>
+                <div>Hyderabad</div>
+                <div>Google India</div>
+            </div>
+            <div class="row">
+                <div>1</div>
+                <div>Raj</div>
+                <div>20</div>
+                <div>Hyderabad</div>
+                <div>Google India</div>
+            </div>
+            <div class="row">
+                <div>1</div>
+                <div>Raj</div>
+                <div>20</div>
+                <div class="mycustomwidh">Hyderabad</div>
+               
+            </div>
+            <div class="row">
+                <div>1</div>
+                <div>Raj</div>
+                <div>20</div>
+                <div>Hyderabad</div>
+                <div>Google India</div>
+            </div>
+        </div>
+    </body>
+</html>

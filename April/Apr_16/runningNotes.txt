@@ -1,0 +1,28 @@
+OOPs
+    Class
+
+
+    Req: 
+        i need n/multiple number of objects with same structure (set of prop, and set of methods/funcs), but with diff values
+
+            Classes 
+
+                'class'
+
+                    class <user defined class name> {
+                        ..
+                        ...
+                        ....
+                    }
+
+                    class StudentDetails {
+                        constructor() {
+
+                        }
+                        set of methods/behaviours/functions
+                        
+                    }
+
+                    var name = 'prasad' 
+                    var name = "prasad"
+                    var name = `prasad`

@@ -1,0 +1,13 @@
+setinterval 
+
+settimeout 
+
+setTimeout()
+
+setInterval()
+Syntax:
+
+    setTimeout(callbackmethod, delaytime in ms)
+
+
+

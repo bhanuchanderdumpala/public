@@ -1,0 +1,43 @@
+"Date"
+
+var mydate = new Date();
+
+
+-------------------
+
+JSON 
+
+    var a = [];
+
+    var a = {};  //Object
+
+    ---------
+
+    var studentDetails = ["Raj", 20, true, [23, 44, 55]];
+
+    var studentDetails = {
+        'sname': 'Raj',
+        "age": 20,
+        'isFeepaid' : true,
+        "marks": [23, 44, 55]
+    };
+
+    var studentDetails = {
+        key : value ,
+        key : value, 
+        key : value 
+    };
+
+    key -> Sholuld always be a string datatype 
+    value -> Could be any datatype what js supports Number, function ,boolean, obj, array, symbol ,,
+
+
+    var name = 'raj';
+    var age = 90
+    var isFeepaid = true;
+
+    20 = 'prasad'
+
+    ----------------
+
+    book name , bookprice, bookauthor - multiplevalues, bookpublisher, bookPriceDiscount

@@ -1,0 +1,61 @@
+predefined events for drag drop 
+
+
+    ondrop
+    ondragstart
+    ondragend
+    ondragging.
+    etc. 
+
+    draggable=true
+
+    ---------------------------------------------
+
+    appcache
+        Using appcache we could provide an option for end-users to access the webpage even while offline..
+
+
+            ebooks.com 
+                1. user logins with credentials 
+                2. explore list of categories
+                3. Select one category and explore list of books in it 
+                4. Select one book and start reading  by click on next nd previous links 
+                5. if the book is intersting, i would like to have physical copy, order/buy it through paymentgateway 
+--------------------------------------------------------
+
+create a text file with list of rules for cache - appcachefile 
+
+    sample.appcache
+
+        Cache: 
+
+            list of all the resources which need to be forcefully cached
+
+
+        Network:
+            List of all the resources which forsure needed network connection 
+
+        Fallback:
+            the alternative static page to be loaded if user tries to access network mandate resource while offline .
+
+--------------------------------------------------------
+<html manifest="ebbokspage.appcahe">
+    ebookspage.appcache 
+
+        CACHE:
+            books/page/test.js 
+            pages/*.js
+            images/books/*.* 
+            .. 
+            ...
+        
+        Network: 
+            login.html 
+            payment/pages/*.*
+        
+        Fallback:
+            sttacipagenotfound.html
+
+http://abc.com/details/pages/test.js
+http://abc.com/details/pages/sample.js
+http://abc.com/details/pages/pages.js

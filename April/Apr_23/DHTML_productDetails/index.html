@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DHTML</title>
+        <script src="../../lib/axios.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <link rel="stylesheet" href="../../lib/ratingStars_lib/rating.css">
+        <script src="../../lib/ratingStars_lib/rating.js"></script>
+        <link rel="stylesheet" href="app.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h3>Product details</h3>
+        <div id="container">
+            <ul class="detailsContainer"></ul>
+        </div>
+
+        <div id="product_tmplt" style="display: none;">
+            <li>
+                <ol>
+                    <li>
+                        <img src="{{url}}">
+                    </li>
+                    <li>Product Name : <span>{{name}}</span></li>
+                    <li>Product Price : <span>{{price}}</span></li>
+                    <li>Manufacturer : <span>{{manufacturer}}</span></li>
+                    <li id="id_{{index}}" class="ratingContainer">
+                        
+                    </li>
+                </ol>
+            </li>
+        </div>
+    </body>
+</html>

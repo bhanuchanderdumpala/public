@@ -1,0 +1,23 @@
+Webworkers:
+    Multi threading & multi tasking
+
+    Webworker
+        'Worker' class using whichwe could create an instance for Webworker
+
+            var w1 = new Worker("path of js file for Webworker")
+
+            eg:
+
+                var myworker = new Worker("abc.js");
+
+    Limitation of a Webworker -> 
+        Webworker can never ever access the Dom structure of webpage - bcz its not part of DOM
+
+document 
+window 
+location 
+history 
+navigator
+------------------------------------
+
+navigator object 

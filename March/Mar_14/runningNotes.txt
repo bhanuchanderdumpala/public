@@ -1,0 +1,110 @@
+Javascript Control Structures:
+
+        3 types of CS 
+
+            Conditional CS 
+                if 
+
+                if else 
+
+                nested if 
+
+                nested if else 
+
+                else if 
+
+            Looping CS 
+
+                for 
+
+                while 
+
+                dowhile 
+
+                for each 
+
+                for of 
+
+                for in 
+
+
+            Case CS 
+                switch case 
+
+            -----------------------------
+
+Conditional CS
+    if Conditional Control Structure
+
+
+        if (one or multiple condition ) {
+            .....
+            ...
+            ...
+        }
+
+        if (condition) {
+            ... 
+            ... 
+        } else {
+            .. ,
+            ...
+        }
+
+        nested if 
+
+
+            if (condition) {
+                ...
+                .....
+                if (condiiton) {
+                    ...
+                    ...
+                }
+            }
+-------------
+
+if (condition) {
+    ...
+} else if (condiiton) {
+    ....
+}
+---------------------------------
+
+name, gender, location, department, basicsal 
+
+calculate total sal, totalsal is pf + hra + basicsal
+
+
+get the total tax percent 
+
+    gnder is male 
+
+        totalsal >= 100000
+
+            taxpercent is 15% on total sal 
+
+        totaalsal >= 50000
+            taxpercent  10%
+
+        totaalsal >= 250000
+            taxpercent is 5% 
+
+        else    
+            taxpercent 0 
+
+ gnder is female 
+
+        totalsal >= 100000
+
+            taxpercent is 10%
+
+        totaalsal >= 50000
+            taxpercent  5%
+
+        else    
+            taxpercent 0 
+
+
+
+

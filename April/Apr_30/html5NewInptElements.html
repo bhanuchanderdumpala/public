@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            ul {
+                width: 700px;
+                border: 1px solid;
+                margin: 20px auto;
+                padding: 10px;
+            }
+            li {
+                list-style: none;
+                border: 1px solid;
+                margin: 10px;
+                padding: 10px;
+                background-color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>
+            Demonstrating html5 input elements
+        </h3>
+        <ul>
+            <li>
+                Name:
+                <input type="text">
+            </li>
+            <li>
+                Age:
+                <input type="number" min="10" max="20">
+            </li>
+            <li>
+                FAv color: 
+                    <input type="color">
+            </li>
+            <li>
+                DoB: 
+                    <input type="datetime-local">
+            </li>
+            <li>
+                Appointment time: 
+                    <input type="time">
+            </li>
+            <li>
+                Which Week:
+                    <input type="week">
+            </li>
+            <li>
+                Price range - <span id="rangevalue"></span>
+                <br>
+                <input type="range" min="1000" max="100000" id="rangebar" onchange="setPriceValue()" step="500">
+            </li>
+            <li>
+                <input type="search">
+            </li>
+            <li>
+                <input type="tel">
+            </li>
+            
+        </ul>
+        <script>
+            var setPriceValue = () => {
+                document.querySelector("#rangevalue").innerText = document.querySelector("#rangebar").value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+Accessing Private data of a function into another function 
+
+    function sample() {
+        ...
+        var a = 90;
+        test();
+    }
+
+    var test = () = > {
+        a -> error 
+    }
+
+
+Sharing private data within the functions 
+
+    1, Passing parameters from a function 
+    2. Returnign values from a function 
+    3. Both passing params and returning values froma  function
+
+    ====================
+
+    let a = 90;
+    var b = 99;
+    const c = 100;
+
+    function sample() {
+        ...
+        let a1 = 99;
+        var a2 = 100;
+        const a3 = 100;
+
+        if (true) {
+            .. 
+            let k = 101;
+            var z = 100;
+        }
+    }
+    while (condiion) {
+        var total = 1000;
+        let test = 'abc'
+    }
+---------
+c 
+
+function sample() {
+    int a1 = 90;
+    float a2 = 99.89;
+    ... 
+    displayDetails(a1, a2)
+}
+
+function displayDetails(int p1, float b) {
+
+}
+
+
+
+function sample() {
+    var  a1 = 90;
+    var a2 = 99.89;
+    ... 
+    displayDetails(a1, a2)
+}
+
+function displayDetails(p1,  b) {
+
+}
+--------------
+
+function first(1) {
+    a = 10;
+    b = 11;
+    
+}
+
+function second() {
+    ...
+    a1 = 10;
+    a2 = 99;
+}
+
+function third() {
+    p1 = 99;
+    p2 = 100;
+
+    second(p1, p2)
+    third(p1, p2)
+}

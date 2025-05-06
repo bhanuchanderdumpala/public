@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating HTML input elements
+        </title>
+        <style>
+            [name=userName] {
+                background-color: yellow;
+            }
+            
+            .formContainer {
+                border: 2px solid;
+                margin: 20px auto;
+                padding: 10px;
+                width: 600px;
+                background-color: #ccc;
+            }
+            .title {
+                text-align: center;
+                color: red;
+            }
+            li {
+                list-style: none;
+                margin: 10px;
+                padding: 10px;
+                background-color: #fff;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <h3>
+            User Registration Page
+        </h3>
+        <form method="GET" action="http://testabcpqr.com/details/info">
+            <ul class="formContainer">
+                <li class="title" test="abc">Student Dteails for Registration</li>
+                <li>
+                    <label for="userName">
+                        :
+                    </label>
+                    <input type="text" name="userName" title="Entr user name here" placeholder="Enter User Name">
+                </li>
+                <li>
+                    Country of Residence <input type="text" value="India" name="currentCountty">
+                </li>
+                <li>
+                    <label for="userActPwd" >
+                        Enter Account Pwd :
+                    </label>
+                    <input type="password" name="userActPwd" maxlength="8">
+                </li>
+                <li>
+                    Gender: <input type="radio" checked name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </li>
+                <li>
+                    Languages: 
+                    English <input type="checkbox" checked disabled name="lng_eng">
+                    Telugu  <input type="checkbox" name="lng_tel">
+                    Urdu <input type="checkbox" name="lng_urdu">
+                </li>
+                <li>
+                    Country of orign:
+                    <select name="countyr_origin" id="">
+                        <option value="">India</option>
+                        <option selected>Japan</option>
+                        <option>Chaina</option>
+                        <option>USA</option>
+                    </select>
+                </li>
+                <li>
+                    Tell about urself:
+                    <textarea rows="10" cols="50" maxlength="300" name="about_User"></textarea>
+                </li>
+                <li>
+                    <input type="submit"  value="Save Details">
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var data = [ 22, 33, 44, 55 ,78, 90];
+
+            console.log(data);
+            console.log(data.length);
+
+            // data.push(100, 102, 304); //insert from right side 
+
+            // console.log(data);
+
+            // data.unshift(200, 300, 400); // insert from left side 
+
+            // console.log(data);
+
+            // data.pop();
+            // console.log(data);
+
+            // data.shift();
+            // console.log(data);
+
+
+            data.splice(2, 0, 101, 302, 709, 201); //both insertion and delettion at any req psition
+
+            console.log(data);
+
+            console.log(data.join(''));
+
+            console.log(data.indexOf(101));
+
+            // map, filter, find, sort, reduce etc. ECMA
+
+        </script>
+    </body>
+</html>

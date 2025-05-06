@@ -1,0 +1,29 @@
+ul {
+    border: 2px solid;
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ccc;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.errMsg {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.pwdValidationBlock > li {
+    color: red;
+}
+
+.validContent {
+    color: green !important;
+    font-weight: bold;
+}

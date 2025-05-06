@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var n = 9387598457029857203498;
+            var sum = 0;
+            while (n > 0) {
+                var rem = n % 10;
+                n = parseInt(n / 10);
+                sum = sum + rem;
+                if (n == 0 && sum > 9) {
+                    n = sum;
+                    sum = 0;
+                }
+            }
+           
+            console.log(sum);
+        </script>
+    </body>
+</html>

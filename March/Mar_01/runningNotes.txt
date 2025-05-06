@@ -1,0 +1,63 @@
+.abc {
+    .
+}
+
+#abc{
+
+}
+
+abc {
+
+}
+
+div[name=test] {
+
+}
+
+#abc div {
+
+}
+
+.abc#pqr {
+
+}
+
+.abc > .pqr {
+    
+}-------------------------------
+
+
+PseudoElements:
+    Using which we could apply css prop partially to the elements 
+
+    -------------------------------
+
+
+
+    webdev.prasad@gmail.com
+    WEBDEV.prasad@gmail.com
+    WEbdev.prasad@gmail.com
+
+    http://www.GOOGLE.com
+    http://www.GOOgle.com
+    http://www.GoOgLe.com
+    -------------------------------
+    CSS float Prop
+
+    float: left/right
+
+        1. When multiple continues elements have changed their direction using float porp, either to left/right, irrelavent of wheahter they belong to block level or inline, thry try to render witin the same line.
+
+        2. When we try to change the direction of any dom element through float prop, the element which is following it will also to try to follow the previous element direction 
+        
+    ---------------------------------
+
+Css Display Prop:
+
+    display: none/inline/block/inline-block/ flex/grid etc.
+
+
+    diff btwn Visiblity hidden and display none.
+=======================================
+
+table
