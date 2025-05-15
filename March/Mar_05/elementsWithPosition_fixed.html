@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .block1,
+            .block2,
+            .block3,
+            .block4 {
+                border: 1px solid;
+                width: 130px;
+                height: 130px;
+                text-align: center;
+            }
+            .block3 {
+                position: fixed;
+                left: 300px;
+                /* top: 30px; */
+            }
+            .parent {
+                border: 2px solid;
+                background-color: red;
+                padding: 20px;
+                position: relative;
+            }
+            .container {
+                border: 2px solid;
+                margin: 20px;
+                padding: 10px;
+                width: 400px;
+                height: 500px;
+                overflow: auto;
+            }
+            h3 {
+                background-color: #000;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+                border: 1px solid #fff;
+                padding: 10px;
+                position: fixed;
+                width: 100%;
+                top: -20px;
+            }
+
+            .specialblock {
+                background-color: yellow;
+                width: 200px;
+                height: 150px;
+                left: 10px;
+                top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 >
+            Demonstrating Position - Fixed
+        </h3>
+        <div class="container">
+            <div class="block1">Block 1</div>
+            <div class="block2">Block 2</div>
+            <div class="block3">Block 3</div>
+            <div class="block4">Block 4</div>
+            <div class="block4">Block 4</div>
+            <div class="block4">Block 4</div>
+            <div class="block4">Block 4</div>
+        </div>
+
+        <div class="container">
+            <div class="block1">Block 1</div>
+            <div class="block2">Block 2</div>
+            <div class="block3 specialblock">Block 3</div>
+            <div class="block4">Block 4</div>
+            <div class="block4">Block 4</div>
+            <div class="block4">Block 4</div>
+            <div class="block4">Block 4</div>
+        </div>
+    </body>
+</html>

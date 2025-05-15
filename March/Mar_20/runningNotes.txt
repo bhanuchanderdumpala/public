@@ -1,0 +1,69 @@
+var n = 234
+
+n = 3478
+
+121
+------------------
+
+
+
+var n = 90;
+n = n.toString(); // n ="90"
+
+
+991 -> 19 -> 10 -> 1
+-------------------------------------------------
+
+For while loop 
+
+    do while 
+
+
+    Syntax:
+
+        do {
+            ..
+            ..
+        }
+=------------------------------------------------
+
+While:
+    n = 90
+    ...
+    while (n > 100) {
+        ...
+        ....
+        .....
+    }
+    ...
+
+    n = 90;
+
+    ...
+    do {
+        ...
+        ....
+
+    } while(n > 100);
+    ...
+    -----------------------------------
+
+        var totalScore = 0;
+        while (totalScore >= 100) {
+            open the sysstem
+            start playing 
+            get the score 
+            
+        }
+
+        var totalScore = 0;
+        do {
+            open the sysstem
+            start playing 
+            get the score 101
+            
+        } while (totalScore >= 100);
+            
+----------------------------------------------------
+CAse CS 
+    switch 

@@ -1,0 +1,15 @@
+
+var data = {
+    name: 'raj',
+    age: 20,
+
+}
+
+var tempkey = 'age'
+
+
+data.name -> raj 
+
+data[tempkey] -> 20
+
+data['age'] -> 20

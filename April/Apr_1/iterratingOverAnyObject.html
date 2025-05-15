@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var details = {
+                name: 'Raj',
+                age: 20,
+                gender: 'Male'
+            }
+
+            var studentDetails = {
+                location: 'Hyd',
+                total: 300,
+                avg: 45.6,
+                name: 'Prasad',
+                marks: [33, 44, 55, 66]
+            }
+
+            var bookDetails = {
+                bookname: 'My Dreams of hills',
+                authorDetails: {
+                    name: 'Krish',
+                    age: 90,
+                    rank: '23/1000',
+                    address: {
+                        streetname: 'abc',
+                        dno: '1/A',
+                        abc: {
+                            test: {
+                                sample: {
+                                    pqr: 'Hello i got invoked'
+                                }
+                            }
+                        }
+                    }
+                },
+                price: 230,
+                discountPercent: 7
+            }
+
+            var iterateOverObject = (data) => {
+                for (var tempkey in data) {
+                    if (typeof( data[tempkey]) == 'object' && data[tempkey].length == undefined) {
+                        iterateOverObject(data[tempkey]);
+                    } else {
+                        console.log(tempkey + ' : ' + data[tempkey]);
+                    }
+                }
+            }
+
+            iterateOverObject(details);
+
+            console.log("------------------------");
+            iterateOverObject(studentDetails);
+
+            console.log("------------------------");
+            iterateOverObject(bookDetails);
+        </script>
+    </body>
+</html>

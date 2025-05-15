@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var a1 = prompt("Enter a value");
+            a1 = parseInt(a1);
+            var a2 = prompt("Enter a value");
+            a2 = parseInt(a2);
+
+            var userOption = prompt("enter ur selection add/mul/div/sub");
+
+            // if (userOption == 'add')  {
+            //     var sum = 0;
+            //     sum = a1 + a2;
+            //     console.log("The sum is " + sum);
+            // } else if (userOption == 'sub') {
+            //     var sub = 0;
+            //     sub = a1 - a2;
+            //     console.log("The sub is " + sub);
+            // } else if (userOption == 'mul') {
+            //     var mul = 0;
+            //     mul = a1 * a2;
+            //     console.log("The Mul is " + mul);
+            // } else if (userOption == 'div') {
+            //     var div = 0;
+            //     div = a1 / a2;
+            //     console.log("The Div is " + div);
+            // } else {
+            //     alert("wrong option choosen");
+            // }
+
+            switch (userOption) {
+                case 'add':
+                    var sum = 0;
+                    sum = a1 + a2;
+                    console.log("The sum is " + sum);
+                    break;
+                case 'mul':
+                    var mul = 0;
+                    mul = a1 * a2;
+                    console.log("The Mul is " + mul);
+                    break; 
+                case 'div':
+                    var div = 0;
+                    div = a1 / a2;
+                    console.log("The Div is " + div);
+                    break; 
+                case 'sub': 
+                    var sub = 0;
+                    sub = a1 - a2;
+                    console.log("The sub is " + sub);
+                    break;
+                default:
+                    console.log("Wrong option choosen")
+            }
+
+        </script>
+    </body>
+</html>

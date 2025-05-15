@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+           /* var getDetails = () => {
+                var name = 'Raj';
+                var age = 20;
+                var gender = 'Male';
+                
+                return [name, age];
+            }
+
+            var showDetails = () => {
+                var details = getDetails();
+                var sname = details[0];
+                var sage = details[1];
+                console.log("name is " + sname);
+                console.log("Age is " + sage);
+                // console.log("Gender is " + gender);
+            } */
+
+            var getDetails = () => {
+                var name = 'Raj';
+                var age = 20;
+                var gender = 'Male';
+                return {
+                    name: name, age: age, gender: gender
+                };
+            }
+
+            var showDetails = () => {
+                var details = getDetails();
+                var sname = details.name;
+                var sage = details.age;
+                console.log("name is " + sname);
+                console.log("Age is " + sage);
+                // console.log("Gender is " + gender);
+            }
+
+
+            showDetails();
+        </script>
+    </body>
+</html>

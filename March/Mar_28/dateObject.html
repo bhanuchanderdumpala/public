@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var monthNames = ["Jan", 'Feb', 'Mar', 'Apr', 'May'];
+            var monthNames_full = ["January", 'Feb', 'March', 'Apr', 'May'];
+            var mySymDate = new Date();
+
+            console.log(mySymDate);
+
+            console.log(mySymDate.getFullYear());
+            console.log(mySymDate.getDate());
+            console.log(mySymDate.getDay());
+            console.log(mySymDate.getMonth());
+
+            var monthIndex = mySymDate.getMonth();
+            console.log(monthNames_full[monthIndex]);
+
+            var myCustomDateFormat = mySymDate.getMonth() + '-' + mySymDate.getDate() + '-' + mySymDate.getFullYear() //MM-dd-yyyy
+            console.log(myCustomDateFormat);
+
+            // Mar 28th 2025
+            // March 28th, 2025
+            // Friday 28th March, 2025
+            // Friday 28/March/2025
+            // Friday, 28/03/2025
+            // 28th March, 2025 8:37:50
+            // 28/03/2025 8:37:50
+            // 28/03/2025
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="app.js"></script>
+        <style>
+            #thanksBlock {
+                border: 2px solid rosybrown;
+                text-align: center;
+                padding: 30px;
+                width: 300px;
+                color: blue;
+                position: absolute;
+                bottom: 20%;
+                left: 35%;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="username" placeholder="Enter user name">
+        <input type="button" value="Save Name" onclick="saveUserDetails()">
+
+        <div style="text-align: right;">
+            Theme Chooser:
+            <!-- <select name="" id="themename" onchange="applyTheme()">
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yello</option>
+                <option value="cherry">Cherry</option>
+                <option value="pink">Pink</option>
+            </select> -->
+            <input type="color" id="themename" onchange="applyTheme()">
+        </div>
+        <div id="thanksBlock">
+
+        </div>
+    </body>
+</html>

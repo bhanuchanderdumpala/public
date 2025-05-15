@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var getSum = (a1, a2) => {
+                var result = 0;
+                result = a1 + a2;
+                return result;
+            }
+
+            var sum = getSum(20, 30);
+            console.log(sum);
+
+            var res = getSum(20, 30);
+            console.log(res);
+
+            var count = 0;
+            var getCounter = (status) => {
+                count++;
+                return count;
+            }
+
+            var result = getCounter(true);
+            console.log(result);
+
+            var result2 = getCounter(true);
+            console.log(result2);
+        </script>
+    </body>
+</html>

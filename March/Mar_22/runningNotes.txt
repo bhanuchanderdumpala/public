@@ -1,0 +1,16 @@
+
+Type I
+function displayDetails() {
+    ...
+}
+
+Type II:
+var displayDetails = function() {
+
+}
+
+Type III
+
+var displayDetails = () => {
+    ...
+}

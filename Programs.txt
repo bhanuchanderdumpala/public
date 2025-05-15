@@ -43,3 +43,7 @@ Json-
 
 Assisment : this keyword using wap program json object function emp details
 Assignment : Add, Mul,Division using unput methods and display the result in HTML page not for console
+
+Assignment : Session storage/ local storage
+Username and password login field for HTML if click on the remember crendials ,
+ fo rnext time store the user name and password

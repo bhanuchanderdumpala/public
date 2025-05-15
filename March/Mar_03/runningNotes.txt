@@ -1,0 +1,67 @@
+display: block /inline
+
+    display: none / inline / block / inline-block flex / grid 
+
+----------------------------------
+
+Table : 
+
+    table 
+    tfoot 
+    thead 
+    tbody 
+    th 
+    td 
+    tr 
+---------------
+
+div 
+    span 
+        p 
+            ul 
+                li 
+                    span 
+                        div 
+
+    HTML table Structure: 
+
+        <table> 
+            <thead>
+                <tr>
+                    <th>... </th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                ..
+                .
+                .
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+        .abc #pqr span p {
+            .... 
+        }

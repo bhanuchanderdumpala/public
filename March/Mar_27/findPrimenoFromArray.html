@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var checkForPrimenumber = (n) => {
+                var count = 0;
+                for (var i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        count++;
+                        break;
+                    }
+                }
+                if (count == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            var doJob = () => {
+                var data = [22, 44, 55, 66, 77, 99, 97, 5];
+
+                for (var i = 0 ; i < data.length; i++) {
+                    var isPrime = checkForPrimenumber(data[i]);
+                    console.log(isPrime + ' ' + data[i]) ;
+                }
+            }
+
+            doJob();
+
+            
+           
+        </script>
+    </body>
+</html>

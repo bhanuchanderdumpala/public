@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var userDetails = [
+                "Krish",
+                30,
+                'MAle',
+                'Hyderbad',
+                'India'
+            ];
+
+            // for ( var i = 0; i < userDetails.length; i++) {
+            //     console.log(userDetails[i]);
+            // }
+
+            var studentDetails = {
+                name: 'Raj',
+                age: 30,
+                gender: 'Male',
+                location: 'Huderabad'
+            };
+
+            for (var tempkey in studentDetails) {
+                console.log(tempkey);
+                // console.log(studentDetails.tempkey);
+                console.log(studentDetails[tempkey]);
+                console.log(tempkey + ' : ' + studentDetails[tempkey]);
+            }
+
+            studentDetails.push("hello");
+
+
+        </script>
+    </body>
+</html>

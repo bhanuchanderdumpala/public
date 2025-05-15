@@ -1,0 +1,58 @@
+Doctype:
+ 
+    <!DOCTYPE html>
+    html 
+        DTD 
+            Document type definition - Schema of the current webpage
+
+HTML4 
+    dtd file 
+
+-----------------
+div
+    login content
+    \
+
+div 
+    success msg
+-----------------------------------
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+-----------------------
+
+Semantic tags:
+    header
+    footer 
+    main 
+    container 
+    article
+    section 
+    nav 
+    menu 
+    menuitem 
+    figure
+    canvas 
+    svg
+    link
+    ... 
+    ...
+
+--------------------------------
+
+New input elements: 
+    number 
+    range 
+    color 
+    email 
+    search 
+    datetime 
+    time
+    week 
+    etc. 
+----------------------
+
+appcache 
+drag and drop 
+navigator 
+

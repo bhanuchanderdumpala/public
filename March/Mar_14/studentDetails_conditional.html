@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            console.log("STart of application")
+            var sname = 'Krish';
+            var sage = 20;
+            var sgender = 'Male';
+            var m1 = 60;
+            var m2 = 70;
+            var m3 = 75;
+
+            var total = m1 + m2 + m3;
+            var avg = total / 3;
+            console.log("Student details")
+            console.log("Name is " + sname)
+            console.log("Age is " + sage);
+            console.log("Total is " + total);
+            console.log("AVG ois " + avg);
+
+
+            // if (avg >= 40) {
+            //     console.log("Student got passed");
+            // }
+
+            // if (avg < 40) {
+            //     console.log("student got failed");
+            // }
+
+            if (avg >= 40) {
+                console.log("Student got passed");
+
+                if (avg >= 90) {
+                    console.log("you got distinction")
+                } else if (avg >= 60) {
+                    console.log("student got First class");
+                } else {
+                    console.log("you gor second class")
+                }
+            } else {
+                console.log("student got failed");
+            }
+        </script>
+    </body>
+</html>

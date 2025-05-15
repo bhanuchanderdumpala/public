@@ -1,0 +1,15 @@
+Event -> any action been performed on a page is called event 
+
+    if we could able to perform a job when event happens, is called event handling 
+
+        Event handling 
+
+            Static event handling 
+                using static event attributes
+                    onclick 
+                    onfocus 
+                    onkeypress
+                    ondoubleclick
+                    onmouvseover 
+                    etc. 
+            Dynamic event handling

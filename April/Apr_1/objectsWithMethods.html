@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+var empdetails = {
+    name: 'empname',
+    displaydetails() {
+        console.log(this.name);
+    }
+}
+            var studentDetails = {
+                schoolName: 'Abc school',
+                schoolLoc: 'Hyderabad',                
+                marks: [],
+                readStudentData() {
+                    this.name = prompt("Enter student name");
+                    for( var i = 0 ; i < 5; i++) {
+                        this.marks[i] = parseInt(prompt("Enter sub marks"))
+                    }
+                    this.getTotalAndAvg();
+                },
+                getTotalAndAvg() {
+                    this.total = 0;
+                    for (var i = 0 ; i < studentDetails.marks.length; i++) {
+                        this.total += studentDetails.marks[i]
+                    }
+                    studentDetails.avg = this.total / this.marks.length;
+                    this.getGrade();
+                },
+                getGrade() {
+                    this.grade = '';
+                    if (this.avg >= 40) {
+                        studentDetails.grade = 'Passed';
+                    } else {
+                        this.grade = 'Surprise';
+                    }
+                },
+                displayStudentDetails() {
+                    studentDetails.readStudentData();
+                    console.log("School name " + studentDetails.schoolName);
+                    console.log("School Loc " + this.schoolLoc);
+                    console.log("Student name " + studentDetails.name);
+                    console.log("Total marks " + this.total);
+                    console.log("Avg is " + this.avg);
+                    console.log("Grade is " + this.grade);
+                }
+
+            }          
+            
+
+            this.displayStudentDetails();
+        </script>
+
+    </body>
+</html>

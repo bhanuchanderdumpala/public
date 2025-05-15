@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .tabContainer div { /* parent and child */
+                border: 1px solid;
+                width: 120px;
+                margin: 5px;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+                float: left;
+            }
+            .tabContainer div:hover {
+                background-color: aqua;
+            }
+
+            .tabcontent {
+                background-color: #ccc;
+                height: 500px;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tabContainer">
+            <div>Home</div>
+            <div>Careers</div>
+            <div>Contact us</div>
+            <div>Our Branches</div>
+        </div>
+        <div class="tabcontent">
+            tab cotnent
+        </div>
+    </body>
+</html>

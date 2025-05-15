@@ -1,0 +1,81 @@
+int a;
+
+a = 10;
+a = 9.5 
+--------------
+
+var a;
+a = 10; // number 
+a = 9.5 // number
+
+var username = 'raj'
+var username = "raj"
+var username = `raj`
+
+var isFeepaid = true;
+
+var z;
+
+DAtatypes been supported in JS 
+    Number 
+    string
+    Boolean 
+    undefined 
+    null 
+    function 
+    Object 
+    Symbol 
+
+
+------------------------------
+
+empname, gender, department and basicsal 
+
+calculate -> totalsal -> basicsal + hra + pf
+
+pf is 12 percent of basicsal
+
+hra is 24 percent of basicsal
+
+---------------------
+
+Typecasting:
+
+    Converting the datatype of one variable to another is called typecasting 
+
+
+    var a = 90;
+
+    var b = '30';
+
+
+
+    parseInt()
+
+    parseFloat()
+
+    ----------------
+
+    Dynamic Typecasting
+
+        int a;
+
+        a = 900;
+        ..
+        a = 'raj';
+--------------
+
+var a = 90;
+.
+.
+.
+
+a = 'Raj'
+,
+.
+.
+.
+.a = true;
+-=----------------------------
+
+Dynamically REading data from user 

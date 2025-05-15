@@ -1,0 +1,31 @@
+<input type="text/password/checkbox/radid/...">
+
+Requirement:
+    To send user input data to specific server
+
+        1. Manually reading data through js, validate and send to server (through ajax)
+
+        2. Form tag, which automatically sends data to specified server
+
+
+
+Form tag: 
+<form>
+</form>
+Two mandage attributes
+    1. action -> specify the server url(dataendpoiint, wwebservice url etc.) to which data has to be sent
+        eg: http://abc.com/details/oinfo
+
+            http://amaxonb.com/details/productinfo
+            .
+            .
+
+            .
+            .
+    2. method
+
+
+    http://testabcpqr.com/details/info ? userName=Krish & userActPwd=hello123 & gender=Male
+
+
+    http://testabcpqr.com/details/info ? userName=Krishna & currentCountty=India & userActPwd=hello123 & gender=Male &lng_tel=on & countyr_origin=Japan & about_User=Hello+am+very+good..

@@ -1,0 +1,12 @@
+
+JS 
+    5 predefined objects 
+        document 
+        window 
+        location 
+        history 
+        navigator 
+
+        -0---------------------
+
+        

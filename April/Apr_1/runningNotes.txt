@@ -1,0 +1,18 @@
+
+
+var data = {
+    name: 'raj\,
+    showdetails: function(){
+
+    },
+    processDetails: () => {
+
+    },
+    showDetails() {
+
+    }
+}
+
+var displaydetails = () => {
+
+}

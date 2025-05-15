@@ -1,0 +1,90 @@
+Conditional CS
+
+Diff btwn =, == and === operators
+Looping CS
+
+true && true -> true 
+
+true && false -> false
+
+
+true || false -> true 
+false || true -> true
+false || false -> false-------
+
+a != b 
+>= 
+<= 
+--------------------------
+
+Looping CS :
+
+    for 
+    while 
+    do while 
+    for each 
+    for in 
+    for of
+====================================
+
+for loop CS 
+
+
+    if (condition) {
+        ..
+        ..
+    }
+
+    Styntax:
+
+    for ( intialization    ;  condition check   ;  inc/dec   ) {
+        ...
+        ...
+        ..
+    }
+
+
+++ and -- operators 
+
+a = 90;
+
+a = a + 1;
+a += 1;
+a++;
+
+Variable Hoisting : - pending
+
+-----------
+
+var a = 10;
+var b = a++; 
+-> a-> 11, b -> 10
+-----------
+var a = 10;
+var b = ++a; 
+-> a-> 11, b -> 11
+------------------------------------------
+
+var n = 5;
+
+5 % 1 -> 0
+
+5 % 2 -> NZ 
+
+5 % 3 -> NZ 
+
+5 % 4 -> NZ 
+
+5 % 5 -> 0
+
+---------
+
+n = 6 
+
+n % 1 - > 0 
+n% 2 - > 0 
+n % 3-> 0 
+n % 4 - > NZ 
+n % 5 - > NZ 
+
+n% 6 - > 0

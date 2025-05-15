@@ -1,0 +1,5 @@
+Steps to access closure data ouside closure
+
+    1. assgin a name to closure
+    2. return an object from the closure - with all the methods and props which need to be accessable ouside of closure 
+    3. To access the closure data, use the closure name 

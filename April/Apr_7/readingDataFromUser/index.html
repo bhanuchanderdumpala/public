@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <ul>
+            <li>
+                Enter first value: 
+                <input type="text" id="fval" onkeypress="return validateTextContent()">
+            </li>
+            <li>
+                Enter Second value: 
+                <input type="text" id="sval">  
+            </li>
+            <li>
+                <input type="button" value="Get Add" onclick="doTheSum()">
+            </li>
+            <li id="resultBlock">
+                The sum of values is 
+                <span>...</span>
+            </li>
+        </ul>
+        <script>
+            var doTheSum = () => {
+                var firstVal = document.querySelector("#fval").value;
+                firstVal = parseInt(firstVal);
+                var secondVal = document.querySelector("#sval").value;
+                secondVal = parseInt(secondVal);
+                var result = firstVal + secondVal;
+
+                document.querySelector('span').innerText  = result;
+            
+                document.querySelector("#resultBlock").style.display = 'block';
+            }
+
+            var validateTextContent = () => {
+                if (user given value is not number) {
+                    return false; 
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

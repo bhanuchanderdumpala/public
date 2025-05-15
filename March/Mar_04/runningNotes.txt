@@ -1,0 +1,39 @@
+
+CSS Positions:  
+
+    4 css  prop 
+
+        top 
+        bottom
+        left 
+        right 
+
+
+        The above 4 prop can only be applied to elements which are positioned 
+
+            position: static / relative / absolute / fixed / sticky 
+
+        
+        position: static;
+            By default every dom element has its position as static 
+                1. It doesnt change its position from its default 
+                2. It doesnt consider the top, left , right or bottom prop 
+
+        position: relative
+
+            1. Any element with position relative, is capable of moving to any new position (it is capabale of considering left, right, bottom or top prop )
+
+            2. While am moving to a new position, it doesnt loose its own default position (under x y axis)
+
+
+By default every satic elements will be rendering on xy axis 
+
+2. By default every non static elements will move from xy axis to z axis
+
+3. only the elements which are under z axis can be moved to any req position
+
+
+Positions absolute:
+    1. While moving to a new position, it doesnt hold its own original position in xy axis 
+    2. While  moving to a new position, it always moves relative to its parent position
+    3. While depending on the parent position, it only depends on the parent who is non static parent. 

@@ -1,0 +1,28 @@
+z-index: numeric value
+0 to any biggestno 
+
+css opacity prop:
+
+    opacity: 0 - 1
+------------------
+
+Ul tag and ol tag 
+
+    Syntax:
+
+        ul 
+            li 
+                div | span | a | ,,,, 
+            li
+            li 
+            li 
+        
+        ol 
+            li 
+            li 
+            li 
+------------------------
+
+HTML input elements 
+
+student detials assingment - float/ul/ol 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            alert("stored object data " + localStorage.getItem("user_name"))
+            var username; 
+
+            alert(username);
+
+            
+            username = prompt("enter value of u name");
+            if (username) {
+                localStorage.setItem("user_name", username);
+            }
+            alert(username);
+        </script>
+    </body>
+</html>

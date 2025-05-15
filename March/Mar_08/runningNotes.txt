@@ -1,0 +1,16 @@
+
+
+http://testabcpqr.com/details/info ? userName=Raj & currentCountty=India&userActPwd=hello123&gender=Male&lng_tel=on&countyr_origin=Japan&about_User=am+good
+
+    Query Parameters 
+    Url rewriting 
+
+    method:
+        1. type of communication with server  secured/non secured 
+        2. The max size we could send to the server - 250kb
+
+    POST 
+        1. The data been sent to the server, in a secured way, - Data gets appended to the request header itself.
+        2. There is no limit for data been sent through post, any file of any size can be sent 
+
+    Delete / query / put etc
