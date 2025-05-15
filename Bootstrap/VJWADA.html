@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vijayawada Trip - Spiritual & Coastal Escape 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --secondary: #f59e0b;
+      --secondary-light: #fbbf24;
+      --accent: #10b981;
+      --accent-light: #34d399;
+      --dark: #1e293b;
+      --dark-light: #334155;
+      --light: #f8fafc;
+      --gray: #e2e8f0;
+      --gray-light: #f1f5f9;
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+      background: var(--gray-light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      transform: rotate(30deg);
+      z-index: 0;
+    }
+
+    .title {
+      position: relative;
+      font-size: 2.5rem;
+      font-weight: 700;
+      z-index: 2;
+      animation: pulse 5s ease-in-out infinite;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      letter-spacing: -0.5px;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.95; transform: scale(1.02); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .container {
+      max-width: 800px;
+    }
+
+    .accordion {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+    }
+
+    .accordion-item {
+      border: none;
+      border-bottom: 1px solid var(--gray);
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-button {
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1.5rem;
+      background-color: white;
+      color: var(--dark);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .accordion-button i {
+      margin-right: 12px;
+      font-size: 1.2rem;
+      color: var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: none;
+    }
+
+    .accordion-button:not(.collapsed) i {
+      color: white;
+    }
+
+    .accordion-button:hover {
+      background-color: var(--primary-light);
+      color: white;
+    }
+
+    .accordion-button:hover i {
+      color: white;
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: transparent;
+    }
+
+    .accordion-button::after {
+      background-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      filter: brightness(0) invert(1);
+    }
+
+    .accordion-body {
+      padding: 1.75rem;
+      background-color: var(--gray-light);
+      font-size: 1.05rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+
+    li:before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      display: inline-block; 
+      width: 1em;
+      margin-left: -1em;
+      position: absolute;
+    }
+
+    a {
+      color: var(--primary-light);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border-bottom: 1px dashed transparent;
+    }
+
+    a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      text-decoration: none;
+    }
+
+    .note {
+      background: rgba(251, 191, 36, 0.15);
+      padding: 1.25rem;
+      border-left: 4px solid var(--secondary);
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      color: var(--dark-light);
+    }
+
+    .note i {
+      color: var(--secondary);
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--dark));
+      color: white;
+      font-size: 1rem;
+      margin-top: 3rem;
+      font-weight: 500;
+    }
+
+    footer i {
+      margin: 0 5px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 1.8rem;
+      }
+      
+      .accordion-button {
+        font-size: 1rem;
+        padding: 1.25rem;
+      }
+      
+      .accordion-body {
+        padding: 1.25rem;
+      }
+    }
+
+    /* Custom accordion item colors */
+    #duration {
+      --item-color: var(--primary);
+    }
+    #overview {
+      --item-color: var(--accent);
+    }
+    #friday {
+      --item-color: #8b5cf6;
+    }
+    #saturday {
+      --item-color: var(--secondary);
+    }
+    #sunday {
+      --item-color: #ec4899;
+    }
+    #packing {
+      --item-color: #14b8a6;
+    }
+
+    /* Apply custom colors to each accordion item */
+    #duration .accordion-button i { color: var(--item-color); }
+    #duration .accordion-button:not(.collapsed) { background-color: var(--item-color); }
+    #duration .accordion-button:hover { background-color: var(--item-color); opacity: 0.9; }
+
+    #overview .accordion-button i { color: var(--item-color); }
+    #overview .accordion-button:not(.collapsed) { background-color: var(--item-color); }
+    #overview .accordion-button:hover { background-color: var(--item-color); opacity: 0.9; }
+
+    #friday .accordion-button i { color: var(--item-color); }
+    #friday .accordion-button:not(.collapsed) { background-color: var(--item-color); }
+    #friday .accordion-button:hover { background-color: var(--item-color); opacity: 0.9; }
+
+    #saturday .accordion-button i { color: var(--item-color); }
+    #saturday .accordion-button:not(.collapsed) { background-color: var(--item-color); }
+    #saturday .accordion-button:hover { background-color: var(--item-color); opacity: 0.9; }
+
+    #sunday .accordion-button i { color: var(--item-color); }
+    #sunday .accordion-button:not(.collapsed) { background-color: var(--item-color); }
+    #sunday .accordion-button:hover { background-color: var(--item-color); opacity: 0.9; }
+
+    #packing .accordion-button i { color: var(--item-color); }
+    #packing .accordion-button:not(.collapsed) { background-color: var(--item-color); }
+    #packing .accordion-button:hover { background-color: var(--item-color); opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="title">Spiritual & Coastal Escape – Vijayawada 2025</div>
+</header>
+
+<div class="container my-5">
+  <div class="accordion" id="tripAccordion">
+
+    <!-- Trip Duration -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#duration" aria-expanded="true">
+          <i class="fas fa-calendar-alt"></i> 🗓 Trip Duration
+        </button>
+      </h2>
+      <div id="duration" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <ul>
+            <li>Friday 5:00 PM to Sunday 9:00 PM</li>
+            <li>Travel by: Own Car</li>
+            <li>Stay: Friend's house in <a href="https://www.google.com/maps/place/Vijayawada" target="_blank">Vijayawada</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trip Overview -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#overview">
+          <i class="fas fa-road"></i> 🚘 Trip Overview
+        </button>
+      </h2>
+      <div id="overview" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Total Round Distance: ~600–650 km</li>
+            <li>Fuel Estimate: ₹3,500 – ₹4,000</li>
+            <li>Driving Time (One Way): ~6 hours</li>
+            <li>Mode of Travel: Personal car</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Friday -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#friday">
+          <i class="fas fa-clock"></i> 🕔 Friday – Departure from Hyderabad
+        </button>
+      </h2>
+      <div id="friday" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Start: 5:00 PM</li>
+            <li>Dinner at <a href="https://www.google.com/maps/place/Suryapet" target="_blank">Suryapet</a> (Hotel Vivera / 7 Food Court)</li>
+            <li>Reach Vijayawada: ~11:00 PM</li>
+            <li>Stay at Friend's place</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saturday -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saturday">
+          <i class="fas fa-sun"></i> 🌄 Saturday – Temple + Beach
+        </button>
+      </h2>
+      <div id="saturday" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>7–9 AM: <a href="https://www.google.com/maps/place/Kanaka+Durga+Temple" target="_blank">Kanaka Durga Temple</a></li>
+            <li>Optional: <a href="https://www.google.com/maps/place/Undavalli+Caves" target="_blank">Undavalli Caves</a> / <a href="https://www.google.com/maps/place/Bhavani+Island" target="_blank">Bhavani Island</a></li>
+            <li>10:30 AM: Leave for <a href="https://www.google.com/maps/place/Suryalanka+Beach" target="_blank">Suryalanka Beach</a></li>
+            <li>12:30–4:30 PM: Beach time – seafood, photos, relaxation</li>
+            <li>Return to Vijayawada ~6:30 PM</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sunday -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sunday">
+          <i class="fas fa-camera"></i> 📸 Sunday – Explore & Return
+        </button>
+      </h2>
+      <div id="sunday" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Morning: Visit <a href="https://www.google.com/maps/place/Kondapalli+Fort" target="_blank">Kondapalli Fort</a>, <a href="https://www.google.com/maps/place/Mangalagiri" target="_blank">Mangalagiri</a>, or <a href="https://www.google.com/maps/place/Amaravati+Stupa" target="_blank">Amaravati</a></li>
+            <li>Lunch: 1:00 PM</li>
+            <li>Return: Leave Vijayawada at 3:00 PM</li>
+            <li>Break: Tea/Dinner at <a href="https://www.google.com/maps/place/Suryapet" target="_blank">Suryapet</a> ~6:00 PM</li>
+            <li>Reach Hyderabad: 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Packing List -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#packing">
+          <i class="fas fa-check-circle"></i> ✅ Packing Checklist
+        </button>
+      </h2>
+      <div id="packing" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <ul>
+            <li>Vehicle documents, FastTag</li>
+            <li>Clothes: Casual + beachwear</li>
+            <li>Snacks, Water bottles</li>
+            <li>Sunglasses, Sunscreen, Slippers</li>
+            <li>Power Bank, Chargers</li>
+            <li>ID Proofs</li>
+            <li>Umbrella (beach/fort)</li>
+          </ul>
+          <div class="note">
+            <i class="fas fa-lightbulb"></i> Pro Tip: Carry cash for local food & donations
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 Vijayawada Travel Crew | Safe Journey! <i class="fas fa-sun"></i><i class="fas fa-car"></i><i class="fas fa-temple"></i>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

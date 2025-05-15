@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Exercise</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">MySite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Container Examples -->
+  <div class="container mt-4">
+    <div class="row g-3">
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="bg-white p-3 border rounded text-center">container-sm</div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="bg-white p-3 border rounded text-center">container-md</div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="bg-white p-3 border rounded text-center">container-lg</div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="bg-white p-3 border rounded text-center">container-xl</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="container mt-4 text-center">
+    <h4>Buttons</h4>
+    <div class="d-flex justify-content-center gap-2 flex-wrap">
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-danger">Danger</button>
+    </div>
+  </div>
+
+  <!-- Columns Example -->
+  <div class="container mt-4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="bg-light border p-3 text-center rounded">Column 1</div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-secondary text-white border p-3 text-center rounded">Column 2</div>
+      </div>
+      <div class="col-md-4">
+        <div class="bg-light border p-3 text-center rounded">Column 3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Form -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5 class="mb-3 text-center">Login Form</h5>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input type="email" class="form-control" placeholder="Enter email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table Section -->
+  <div class="container mt-5">
+    <h4 class="mb-3">User Table</h4>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered align-middle">
+        <thead class="table-primary">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>jane@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
