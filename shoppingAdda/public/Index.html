@@ -21,6 +21,9 @@
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/axios.js"></script>
   <script src="lib/ratingStars_lib/rating.js"></script>
+  <script src="lib/capthcallib.js"></script>
+  <script src="captch.js"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
@@ -69,23 +72,40 @@
                       <input type="text" class="form-control" id="username" placeholder="Enter your username"
                         required />
                     </div>
-                    
+
                     <div class="mb-3 text-start">
                       <label for="password" class="form-label" alighnament="left">Password</label>
                       <input type="password" class="form-control" id="password" placeholder="Enter your password"
                         required />
                     </div>
-                    <div class="text-start">
 
-                      <input type="checkbox" id="rememberMe" checked />
-                      <label for="RememberMe">Remember Me</label>
-                    </div>
+                    <div class="mb-3 text-start">
+                      <label for="loginCaptcha" class="form-label">Captcha</label>
+
+                      <!-- Captcha and refresh icon inline -->
+                      <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="block" id="captchaBlock">AB12C</div>
+
+                        <!-- Icon button -->
+                        <button type="button"
+                          class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center p-2"
+                          onclick="getCaptcha()" aria-label="Refresh Captcha">
+                          <i class="bi bi-arrow-clockwise"></i>
+                        </button>
+                        <input type="text" class="form-control" id="loginCaptcha" placeholder="Enter captcha" required />
+</div>
+                      </div>
+                      <div class="text-start">
+
+                        <input type="checkbox" id="rememberMe" checked />
+                        <label for="RememberMe">Remember Me</label>
+                      </div>
 
 
-                    <div class="modal-footer d-flex justify-content-center gap-2">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="Login">Login</button>
-                    </div>
+                      <div class="modal-footer d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="Login">Login</button>
+                      </div>
                   </form>
                 </div>
               </div>
@@ -96,74 +116,77 @@
           </div>
 
           <!-- Signup Button -->
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">
-  Signup
-</button>
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">
+            Signup
+          </button>
 
-<!-- Signup Modal -->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
+          <!-- Signup Modal -->
+          <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title" id="signupModalLabel">Signup for Shopping_Adda</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+                <div class="modal-header">
+                  <h5 class="modal-title" id="signupModalLabel">Signup for Shopping_Adda</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-      <div class="modal-body">
-        <form id="signupForm">
-          <div class="mb-3 text-start">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-          </div>
+                <div class="modal-body">
+                  <form id="signupForm">
+                    <div class="mb-3 text-start">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
 
-          <div class="mb-3 text-start">
-            <label for="email" class="form-label">Username / Email ID</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-          </div>
+                    <div class="mb-3 text-start">
+                      <label for="email" class="form-label">Username / Email ID</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
 
-          <div class="mb-3 text-start">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter mobile number" required>
-          </div>
+                    <div class="mb-3 text-start">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Enter mobile number" required>
+                    </div>
 
-          <div class="mb-3 text-start">
-            <label class="form-label d-block">Gender</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male" required>
-              <label class="form-check-label" for="genderMale">Male</label>
+                    <div class="mb-3 text-start">
+                      <label class="form-label d-block">Gender</label>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male"
+                          required>
+                        <label class="form-check-label" for="genderMale">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                      </div>
+                    </div>
+
+                    <div class="mb-3 text-start">
+                      <label for="dob" class="form-label">Date of Birth</label>
+                      <input type="date" class="form-control" id="dob" required>
+                    </div>
+
+                    <div class="mb-3 text-start">
+                      <label for="signupPassword" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="signupPassword" placeholder="Enter password"
+                        required>
+                    </div>
+
+                    <div class="mb-3 text-start">
+                      <label for="confirmPassword" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password"
+                        required>
+                    </div>
+
+                    <div class="modal-footer d-flex justify-content-center gap-2">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-success">Signup</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
-              <label class="form-check-label" for="genderFemale">Female</label>
-            </div>
           </div>
-
-          <div class="mb-3 text-start">
-            <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" required>
-          </div>
-
-          <div class="mb-3 text-start">
-            <label for="signupPassword" class="form-label">Password</label>
-            <input type="password" class="form-control" id="signupPassword" placeholder="Enter password" required>
-          </div>
-
-          <div class="mb-3 text-start">
-            <label for="confirmPassword" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
-          </div>
-
-          <div class="modal-footer d-flex justify-content-center gap-2">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-success">Signup</button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
         </div>
       </div>
     </header>
@@ -174,37 +197,38 @@
       <p>Your one-stop shop for all your needs!</p>
     </main>
 
-    
+
     <!-- Footer -->
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <ul class="nav justify-content-center mb-2">
-      <li class="nav-item"><a href="#" class="nav-link footer-link">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link footer-link">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link footer-link">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link footer-link">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link footer-link">About</a></li>
-    </ul>
-    <p class="mb-0">&copy; 2025 Shopping_Adda</p>
-    <div class="social-icons">
-      <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <ul class="nav justify-content-center mb-2">
+          <li class="nav-item"><a href="#" class="nav-link footer-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link footer-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link footer-link">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link footer-link">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link footer-link">About</a></li>
+        </ul>
+        <p class="mb-0">&copy; 2025 Shopping_Adda</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="scroll-to-top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+
+
   </div>
-</footer>
 
-<!-- Scroll to Top Button -->
-<button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="scroll-to-top">
-  <i class="bi bi-arrow-up"></i>
-</button>
-
-
-    
-
-  </div>
 </body>
 
 </html>

@@ -7,29 +7,29 @@
     .container {
       max-width: 960px;
       background-color: #fdfefe;
-      border-radius: 12px;
+      border-radius: 1px;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(230, 45, 45, 0.1);
       margin-top: 30px;
     }
     .modal-dialog {
       max-width: 600px;
-      background-color: rgb(228, 134, 57);
-      border-radius: 2px;
-      padding: 20px;
+      background-color: rgb(245, 17, 17);
+      border-radius: 1px;
+      padding: 5px;
     }
     .modal-content{
-      background-color: rgb(33, 145, 139) !important;
+      background-color: rgb(151, 153, 153) !important;
       border-radius: 3px;
     }
     .modal-header {
-      background-color: rgb(178, 189, 152) !important;
+      background-color: rgb(98, 104, 83) !important;
       border-radius: 2px;
     }
     .header {
             
-      border-radius: 10px;
-      background-color: rgb(195, 236, 99) !important ;
+      border-radius: 3px;
+      background-color: rgb(197, 195, 92) !important ;
       font-size: bold;
         color: black;
     }
@@ -85,6 +85,16 @@
       color: #05c51f;
       text-decoration: underline;
     }
+    .block {
+  padding: 0.375rem 0.75rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  min-width: 100px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
     
     .social-icons .social-icon {
       color: #ca0808;
