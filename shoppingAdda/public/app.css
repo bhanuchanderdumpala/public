@@ -12,7 +12,20 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       margin-top: 30px;
     }
-
+    .modal-dialog {
+      max-width: 600px;
+      background-color: rgb(228, 134, 57);
+      border-radius: 2px;
+      padding: 20px;
+    }
+    .modal-content{
+      background-color: rgb(33, 145, 139) !important;
+      border-radius: 3px;
+    }
+    .modal-header {
+      background-color: rgb(178, 189, 152) !important;
+      border-radius: 2px;
+    }
     .header {
             
       border-radius: 10px;

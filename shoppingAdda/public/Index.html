@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping_Adda</title>
 
   <!-- Bootstrap & Icons -->
@@ -12,7 +13,7 @@
   <link rel="stylesheet" href="app.css" />
 
   <!-- Custom CSS -->
-  
+
 
   <!-- JS Libraries -->
   <script src="lib/jquery.js"></script>
@@ -45,8 +46,123 @@
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Login
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Login into application</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3 text-start">
+                      <label for="username" class="form-label" alighnment="left">Username</label>
+                      <input type="text" class="form-control" id="username" placeholder="Enter your username"
+                        required />
+                    </div>
+                    
+                    <div class="mb-3 text-start">
+                      <label for="password" class="form-label" alighnament="left">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                        required />
+                    </div>
+                    <div class="text-start">
+
+                      <input type="checkbox" id="rememberMe" checked />
+                      <label for="RememberMe">Remember Me</label>
+                    </div>
+
+
+                    <div class="modal-footer d-flex justify-content-center gap-2">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="Login">Login</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <!-- Signup Button -->
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">
+  Signup
+</button>
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Signup for Shopping_Adda</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="signupForm">
+          <div class="mb-3 text-start">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="email" class="form-label">Username / Email ID</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter mobile number" required>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label class="form-label d-block">Gender</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male" required>
+              <label class="form-check-label" for="genderMale">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+              <label class="form-check-label" for="genderFemale">Female</label>
+            </div>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" required>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="signupPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Enter password" required>
+          </div>
+
+          <div class="mb-3 text-start">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
+          </div>
+
+          <div class="modal-footer d-flex justify-content-center gap-2">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success">Signup</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </header>
@@ -71,4 +187,5 @@
 
   </div>
 </body>
+
 </html>
