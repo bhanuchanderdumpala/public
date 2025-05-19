@@ -4,37 +4,54 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     .container {
-      max-width: 960px;
-      background-color:white;
-      border-radius: 3px solid 3% !important;
+      max-width: 100%;
+      background-color:whitesmoke;
+      border-radius: 1px solid 3% !important;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(235, 230, 230, 0.1);
+      box-shadow: 0 4px 12px rgba(235, 230, 230, 0.1); 
       margin-top: 30px;
       font-weight: bold;
       color: #333;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
     .modal-dialog {
       max-width: 600px;
-      background-color: whitesmoke;
+      background-color: rgb(247, 243, 243);
       border-radius: 10px solid 3% !important;
       padding: 5px;
       font-weight: bold;
     }
     .modal-content{
-      background-color: rgba(228, 190, 25, 0.082) !important;
+      background-color: rgba(219, 150, 14, 0.082) !important;
       border-radius: 10px solid 3% !important;
       padding: 5px;
     }
     .modal-header {
-      background-color: rgb(202, 111, 7) !important;
+      background-color: rgb(185, 28, 252) !important ;
       border-radius: 1px;
       color: black;
+      font-weight: bold;
+      padding: 10px;
     }
     .header {
             
       border-radius: 3px;
-      background-color: rgb(202, 111, 7) !important ;
+      background-color: rgb(84, 77, 84) !important ;
+      font-size: bold;
+        color: black;
+    }
+    .header1 {
+            
+      border-radius: 3px;
+      background-color: rgb(185, 28, 252) !important ;
       font-size: bold;
         color: black;
     }
@@ -59,28 +76,34 @@
       text-align: center;
       color: #495057;
     }
-
-    footer {
-      background-color: #10b0c5;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 40px;
+    .header img {
+      border-radius: 8px;
+      object-fit: contain;
     }
+
+    
 
     footer a:hover {
       text-decoration: underline;
-    }/* Footer Styling */
+
+    }
+   
     .footer {
       background-color: #73eca6;
       color: rgb(94, 122, 120);
       text-align: center;
       font-size: 14px;
       padding: 20px 0;
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+       
     }
     
     .footer-link {
       color: black;
-      margin: 0 10px;
+      margin: 10px;
       font-size: 14px;
       text-decoration: none;
       transition: color 0.3s ease;
@@ -112,7 +135,7 @@
       color: #ffc107;
     }
     
-    /* Scroll to Top Button */
+    Scroll to Top Button 
     .scroll-to-top {
       position: fixed;
       right: 20px;
@@ -132,4 +155,20 @@
     .scroll-to-top:hover {
       background-color: #ffcd39;
       transform: scale(1.1);
+    } 
+    .social-icons a {
+      transition: transform 0.2s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .carousel-indicators
+    .carousel-item 
+    .carousel-item
+    .carousel-item img {
+     
+      height: auto;
+      width: 100%;
+      
     }

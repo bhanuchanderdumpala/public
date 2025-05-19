@@ -6,16 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping_Adda</title>
 
-  <!-- Bootstrap & Icons -->
+  
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="lib/bootstrap-icons/bootstrap-icons.css" />
   <link rel="stylesheet" href="lib/ratingStars_lib/rating.css" />
   <link rel="stylesheet" href="app.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="lib/bootstrap-icons/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 
-  <!-- Custom CSS -->
+
 
 
   <!-- JS Libraries -->
@@ -32,10 +34,10 @@
   <div class="container">
 
     <!-- Header -->
-    <header class="p-3 text-bg-dark header">
+    <header class="p-3 text header header1">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <i class="bi bi-bag-check-fill fs-3 me-2"></i>
+          <img src="images/logo.png" alt="ShoppingAdda Logo" width="40" height="40" class="me-2" />
           <span class="fs-4">Shopping_Adda</span>
         </a>
 
@@ -47,8 +49,8 @@
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-bg-dark search1" placeholder="Search..." />
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 search1" role="search">
+          <input type="search" class="form-control form-control-dark  search1" placeholder="Search..." />
         </form>
 
         <div class="text-end">
@@ -57,6 +59,8 @@
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Login
           </button>
+
+          
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -195,60 +199,141 @@
     </header>
 
     <!-- Main Content -->
-    <main>
-       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"></div>
+    <!-- <main class="container-fluid p-4" style="height: 100vh; display: flex; flex-direction: column;"> -->
 
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+      <!-- Carousel Section - 30% height -->
+      <main style="flex: 1; display: flex; flex-direction: column;">
+      <div style="flex: 0 0 10%;">
+        <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="500">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-            aria-label="Slide 4"></button>
+              aria-label="Slide 4"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-            aria-label="Slide 5"></button>
+              aria-label="Slide 5"></button>
+          </div>
+    
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+              <img src="images/img1.jpg" class="d-block w-100 h-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="images/img2.jpg" class="d-block w-100 h-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="images/img3.jpg" class="d-block w-100 h-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="images/img4.png" class="d-block w-100 h-100" alt="Slide 4">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="images/img5.jpg" class="d-block w-100 h-100" alt="Slide 5">
+            </div>
+          </div>
+    
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/img1.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/img2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/img3.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/img4.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="images/img5.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    </dev>
-      <p>Your one-stop shop for all your needs!</p>
+    
+      <!-- Tagline -->
+      <p class="text-center mt-2">Your one-stop shop for all your needs!</p>
+    
+      
+      <!-- <div style="flex: 1; overflow-y: auto;" class="mt-3">
+        <div class="container">
+          <div class="row row-cols-2 row-cols-md-4 g-4">
+           
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">₹499</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">₹499</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">₹499</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">₹499</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">₹499</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">₹499</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">₹499</p>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>  -->
+     
     </main>
+    
 
 
-    <!-- Footer -->
+    
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <ul class="nav justify-content-center mb-2">
+        <ul class="nav justify-content-center mb-3">
           <li class="nav-item"><a href="#" class="nav-link footer-link">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link footer-link">Features</a></li>
           <li class="nav-item"><a href="#" class="nav-link footer-link">Pricing</a></li>
@@ -256,11 +341,19 @@
           <li class="nav-item"><a href="#" class="nav-link footer-link">About</a></li>
         </ul>
         <p class="mb-0">&copy; 2025 Shopping_Adda</p>
-        <div class="social-icons">
-          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        <div class="social-icons" style="display: flex; gap: 10px; justify-content: center;">
+          <a href="#" class="social-icon">
+            <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" width="24" height="24">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" width="24" height="24">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" width="24" height="24">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube" width="24" height="24">
+          </a>
         </div>
       </div>
     </footer>
@@ -274,6 +367,7 @@
 
 
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
