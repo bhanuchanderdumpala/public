@@ -38,7 +38,7 @@
     }
     .modal-header {
       /* background-color: rgb(185, 28, 252) !important ; */
-      background-image: linear-gradient(to right, #f08945, #39f2ff,rgb(185, 28, 252));
+      background-image: linear-gradient(to left, #9c928b, #4e7679,rgb(160, 128, 173));
       border-radius: 1px;
       color: black;
       font-weight: bold;
@@ -57,7 +57,7 @@
       background-color: rgb(185, 28, 252) !important ;
       font-size: bold;
         color: black;
-        background-image: linear-gradient(to right, #dae953, #f05a5a,white,rgb(185, 28, 252),whitesmoke);
+        background-image: linear-gradient(to right, #dae953, #50c5b7,white,rgb(185, 28, 252),whitesmoke);
     }
 
     .search1 {
