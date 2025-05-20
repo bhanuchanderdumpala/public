@@ -38,7 +38,7 @@
     }
     .modal-header {
       /* background-color: rgb(185, 28, 252) !important ; */
-      background-image: linear-gradient(to left, #9c928b, #4e7679,rgb(160, 128, 173));
+      background-image: linear-gradient(to , #f08945, #39f2ff,rgb(185, 28, 252));
       border-radius: 1px;
       color: black;
       font-weight: bold;

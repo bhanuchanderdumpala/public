@@ -4,7 +4,7 @@ var router = express.Router();
 router.get('/', (request, response) => {
     response.send("Hello World this is our own created web services meams api");
     var responseobj = {};
-    if (request.body.accountid == "admin" && request.body.password == "Admin@123") {
+    if (request.body.accountid == "Admin" && request.body.password == "Admin@123") {
         responseobj.status = "Valid";
         statuscode = 200;
         responseobj.message = "User is authenticated";
