@@ -27,16 +27,18 @@
       background-color: rgb(247, 243, 243);
       border-radius: 10px solid 3% !important;
       padding: 5px;
+      background-image: linear-gradient(to right, #f08945, #39f2ff,rgb(185, 28, 252));
       font-weight: bold;
     }
     .modal-content{
       background-color: rgba(219, 150, 14, 0.082) !important;
       border-radius: 10px solid 3% !important;
       padding: 5px;
+      background-image: linear-gradient(to right, #f08945, #39f2ff,rgb(185, 28, 252));
     }
     .modal-header {
       /* background-color: rgb(185, 28, 252) !important ; */
-      background-color: linear-gradient(to right, #73eca6,  rgb(185, 28, 252));
+      background-image: linear-gradient(to right, #f08945, #39f2ff,rgb(185, 28, 252));
       border-radius: 1px;
       color: black;
       font-weight: bold;
@@ -55,7 +57,7 @@
       background-color: rgb(185, 28, 252) !important ;
       font-size: bold;
         color: black;
-        background-image: linear-gradient(to right, #f08945, #39f2ff,rgb(185, 28, 252));
+        background-image: linear-gradient(to right, #dae953, #f05a5a,white,rgb(185, 28, 252),whitesmoke);
     }
 
     .search1 {
@@ -194,3 +196,16 @@
       width: 100%;
       
     }
+
+    
+  .offcanvas-body a {
+    display: block;
+    padding: 6px 0;
+    font-size: 1rem;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .offcanvas-body a:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+  }
