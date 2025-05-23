@@ -8,7 +8,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var validateUserCredentials = require('./routes/validateUserCredentials');
 var employeeDetails= require('./routes/getempdetails');
+<<<<<<< HEAD
 var newUserSignup = require('./routes/newUserSignup');
+=======
+var getdetails = require('./routes/getdeatils');
+>>>>>>> 7cc2ad118b7a2897e75db797caa5ec373618af3c
 
 
 
@@ -28,9 +32,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/validate/user/credentials', validateUserCredentials);
+<<<<<<< HEAD
 app.use('/employee/details', employeeDetails);
 app.use('/newusersignup/register', newUserSignup);
 
+=======
+app.use('/get/emp/details', employeeDetails);
+app.use('/get/details', getdetails);
+>>>>>>> 7cc2ad118b7a2897e75db797caa5ec373618af3c
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
