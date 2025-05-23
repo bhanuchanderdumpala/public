@@ -12,7 +12,7 @@ var validateUserCredentials = () => {
         } else {
              $("#statusMsg").text('Valid credentials, please visit product details.....');
               loginModal.hide();
-            loadSeletedPage('productDetails')
+            loadSeletedPage('productDetails');
         }
     }).catch((err) => {
         

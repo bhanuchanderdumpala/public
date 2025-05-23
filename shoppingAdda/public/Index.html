@@ -166,17 +166,21 @@
                   <form id="signupForm">
                     <div class="mb-3 text-start">
                       <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                      <input type="text" class="form-control" id="Name" placeholder="Enter your name" required>
                     </div>
 
                     <div class="mb-3 text-start">
-                      <label for="email" class="form-label" >Username / Email ID</label>
-                      <input type="email" class="form-control" id="s_accountId" placeholder="Enter your email" required>
+                      <label for="email" class="form-label" >Username </label>
+                      <input type="email" class="form-control" id="s_accountId" placeholder="Enter your User Name" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                      <label for="email" class="form-label" >Email ID</label>
+                      <input type="email" class="form-control" id="s_email" placeholder="Enter your email" required>
                     </div>
 
                     <div class="mb-3 text-start">
                       <label for="phone" class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control" id="phone" placeholder="Enter mobile number" required>
+                      <input type="tel" class="form-control" id="s_phone" placeholder="Enter mobile number" required>
                     </div>
 
                     <div class="mb-3 text-start">
@@ -194,7 +198,7 @@
 
                     <div class="mb-3 text-start">
                       <label for="dob" class="form-label">Date of Birth</label>
-                      <input type="date" class="form-control" id="dob" required>
+                      <input type="date" class="form-control" id="s_dob" required>
                     </div>
 
                     <div class="mb-3 text-start">
@@ -208,6 +212,11 @@
                       <input type="password" class="form-control" id="s_rpassword" placeholder="Confirm password"
                         required>
                     </div>
+                    <li><div class="sigupsucessmessage">
+                      <p id="signupStatusMsg" style="display: none;"></p>
+                      <span><button type="button" class="Login" onclick="validateUserCredentials()">Login</button>
+                      </span>
+                    </li>
 
                     <div class="modal-footer d-flex justify-content-center gap-2">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -232,6 +241,7 @@
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
+  
   <div class="offcanvas-body">
     <div>
       Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
