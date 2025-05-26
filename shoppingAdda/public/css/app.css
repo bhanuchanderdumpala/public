@@ -149,6 +149,20 @@
   font-weight: bold;
   letter-spacing: 2px;
 }
+ .block {
+  text-align: center;
+  letter-spacing: 8px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 200px;
+  padding: 10px;
+  border: 2px solid rgb(216, 241, 124);
+  border-radius: 8px;
+  background-color: whitesmoke;
+  color: #333;
+  user-select: none;
+}
+
     
     .social-icons .social-icon {
       color: #ca0808;

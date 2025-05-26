@@ -5,356 +5,211 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping_Adda</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Adda page</title>
-  <script src="lib/handlebar.js"></script>
-  <script src='lib/axios.js'></script>
-  <link rel="stylesheet" href="lib/bootstrap-icons/font/bootstrap-icons.min.css">
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <link rel="stylesheet" href="css/app.css">
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/jquery.js"></script>
-  <script src="javascripts/productLoad.js"></script>
-  <script src="lib/capthcalib.js"></script>
-  <script src="javascripts/main.js"></script>
-  <script src="javascripts/login.js"></script>
-  <script src="lib/axios.js"></script>
-  <script src="lib/handlebar.js"></script>
-  <script src="lib/ratingStars_lib/rating.js"></script>
-  <link rel="stylesheet" href="lib/ratingStars_lib/rating.css">
-
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
   
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="lib/bootstrap-icons/bootstrap-icons.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bs5-toast@1.0.0/dist/bs5-toast.min.js"></script>
-  
-  
-  
+  <link rel="stylesheet" href="lib/ratingStars_lib/rating.css">
+  <link rel="stylesheet" href="css/app.css">
 
-
-
+  <!-- Scripts -->
+  <script src="lib/jquery.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/axios.js"></script>
+  <script src="lib/capthcallib.js"></script>
+  <script src="captch.js"></script>
+  <script src="lib/handlebar.js"></script>
+  <script src="lib/ratingStars_lib/rating.js"></script>
+  <script src="javascripts/main.js"></script>
+  <script src="javascripts/login.js"></script>
+  <script src="javascripts/productLoad.js"></script>
 </head>
 
 <body>
   <div class="container-fluid">
-
-    <!-- Header -->
-     
     <header class="p-3 text header header1">
-      <div class="d-flex align-items-center flex-row gap-2">
-      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
           <i class="bi bi-list"></i>
-          <span class="visually-hidden">Toggle navigation</span>
         </button>
-      <div class="d-flex flex-row w-100 flex-wrap align-items-center justify-content-center justify-content-lg-between">
-        
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-         
-          <img src="images/logo.png" alt="ShoppingAdda Logo" width="40" height="40" class="me-2" />
-          <span class="fs-4">Shopping_Adda</span>
-        </a>
-        
-
-        <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 font-color:block">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-red">Features</a></li>
-          <li><a href="#" class="nav-link px-2 text-block">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-block">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-block">About</a></li>
-        </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 search1" role="search">
-          <input type="search" class="form-control form-control-dark  search1" placeholder="Search..." />
-        </form>
-
-        <div class="text-end">
-
-          <!-- Button trigger modal -->
-
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-            LOGIN
-        </button>
-
-
-
-          <!-- Modal -->
-          <div class="modal fade" id="loginModal" tabindex="-1" id="loginModal" aria-labelledby="loginModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="loginModalLabel">Login into application</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="mb-3 text-start">
-                      <label for="username" class="form-label" alighnment="left">Username</label>
-                      <input type="text" class="form-control" id="userAccountId" placeholder="Enter your username"
-                        required />
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label for="password" class="form-label" alighnament="left">Password</label>
-                      <input type="password" class="form-control" id="accountPassword" placeholder="Enter your password"
-                        required />
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label for="loginCaptcha" class="form-label">Captcha</label>
-
-                      <!-- Captcha and refresh icon inline -->
-                      <div class="d-flex align-items-center gap-2 mb-2">
-                        <div class="block" id="captchaBlock">AB12C</div>
-
-                        <!-- Icon button -->
-                        <button type="button"
-                          class="btn btn-outline-secondary btn-sm d-flex align-items-center justify-content-center p-2"
-                          onclick="addCapthcaText()" aria-label="Refresh Captcha">
-                          <i class="bi bi-arrow-clockwise"></i>
-                        </button>
-                        <input type="text" class="form-control" id="loginCaptcha" placeholder="Enter captcha"
-                          required />
-                      </div>
-                    </div>
-                    <div class="text-start">
-
-                      <input type="checkbox" id="rememberMe" checked />
-                      <label for="RememberMe">Remember Me</label>
-                    </div>
-                    <a class="alert-link" href="#" onclick="showSignupModal()">
-                        New user signup ?
-                    </a>
-                    <li id="statusMsg">
-
-                    </li>
-
-                    <div class="modal-footer d-flex justify-content-center gap-2">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="Login" onclick="validateUserCredentials()">Login</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-
-
-          </div>
-
-          <!-- Signup Button -->
-          <button type="button" class="btn btn-success" id="signupModal" data-bs-toggle="modal" data-bs-target="#signupModal">
-            Signup
-        </button>
-
-          <!-- Signup Modal -->
-          <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-
-                <div class="modal-header">
-                  <h5 class="modal-title" id="signupModalLabel">Signup for Shopping_Adda</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                  <form id="signupForm">
-                    <div class="mb-3 text-start">
-                      <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label for="email" class="form-label" >Username / Email ID</label>
-                      <input type="email" class="form-control" id="s_accountId" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label for="phone" class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control" id="phone" placeholder="Enter mobile number" required>
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label class="form-label d-block">Gender</label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male"
-                          required>
-                        <label class="form-check-label" for="genderMale">Male</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
-                        <label class="form-check-label" for="genderFemale">Female</label>
-                      </div>
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label for="dob" class="form-label">Date of Birth</label>
-                      <input type="date" class="form-control" id="dob" required>
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label for="signupPassword" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="s_password" placeholder="Enter password"
-                        required>
-                    </div>
-
-                    <div class="mb-3 text-start">
-                      <label for="confirmPassword" class="form-label">Confirm Password</label>
-                      <input type="password" class="form-control" id="s_rpassword" placeholder="Confirm password"
-                        required>
-                    </div>
-
-                    <div class="modal-footer d-flex justify-content-center gap-2">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-success">Signup</button>
-                    </div>
-                  </form>
-                </div>
-
-              </div>
-            </div>
+        <div class="d-flex flex-wrap align-items-center justify-content-between w-100">
+          <a href="/" class="d-flex align-items-center text-white text-decoration-none">
+            <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2">
+            <span class="fs-4">Shopping_Adda</span>
+          </a>
+          <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          </ul>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control" placeholder="Search..." />
+          </form>
+          <div class="text-end d-flex gap-2">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
           </div>
         </div>
       </div>
-    </div>
     </header>
 
-    <!-- Off Canvass sidebar -->
-    
-
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark">Home</a></li>
+          <li><a href="#" class="text-dark">Features</a></li>
+          <li><a href="#" class="text-dark">Pricing</a></li>
+          <li><a href="#" class="text-dark">FAQs</a></li>
+          <li><a href="#" class="text-dark">About</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-    
-
-    <main style="flex: 1; display: flex; flex-direction: column;">
-      
-      <div style="flex: 0 0 10%;">
-          <div id="carouselExampleIndicators" class="carousel slide h-50" data-bs-ride="carousel" data-bs-interval="500">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
-            </div>
-
-            <div class="carousel-inner h-50">
-              <div class="carousel-item active h-100">
-                <img src="images/img1.jpg" class="d-block w-100 h-100" alt="Slide 1">
-              </div>
-              <div class="carousel-item h-50">
-                <img src="images/img2.jpg" class="d-block w-100 h-100" alt="Slide 2">
-              </div>
-              <div class="carousel-item h-50">
-                <img src="images/img3.jpg" class="d-block w-100 h-100" alt="Slide 3">
-              </div>
-              <div class="carousel-item h-50">
-                <img src="images/img4.png" class="d-block w-100 h-100" alt="Slide 4">
-              </div>
-              <div class="carousel-item h-50">
-                <img src="images/img5.jpg" class="d-block w-100 h-100" alt="Slide 5">
-              </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+    <!-- Carousel -->
+    <main style="flex: 1;">
+      <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/img1.jpg" class="d-block w-100" alt="...">
           </div>
-      </div> 
-      
+          <div class="carousel-item">
+            <img src="images/img2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/img3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
     </main>
-    
-    Tagline 
+
+    <!-- Tagline -->
     <p class="text-center mt-2">Your one-stop shop for all your needs!</p>
 
-
-    
-
-
-
-
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <ul class="nav justify-content-center mb-3">
-          <li class="nav-item"><a href="#" class="nav-link footer-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link footer-link">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link footer-link">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link footer-link">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link footer-link">About</a></li>
-        </ul>
-        <p class="mb-0">&copy; 2025 Shopping_Adda</p>
-        <div class="social-icons" style="display: flex; gap: 10px; justify-content: center;">
-          <a href="#" class="social-icon">
-            <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" width="24" height="24">
-          </a>
-          <a href="#" class="social-icon">
-            <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" width="24" height="24">
-          </a>
-          <a href="#" class="social-icon">
-            <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter" width="24" height="24">
-          </a>
-          <a href="#" class="social-icon">
-            <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube" width="24" height="24">
-          </a>
-        </div>
-        <div class="footer-block">
-
-          <p>Shopping_Adda is a leading e-commerce platform that connects buyers and sellers worldwide. Our mission is
-            to provide a seamless shopping experience for everyone.</p>
-
-
-        </div>
-      </div>
+    <footer class="footer mt-4 bg-light text-center p-4">
+      <p class="mb-1">&copy; 2025 Shopping_Adda</p>
+      <p class="mb-0">Shopping_Adda is a leading e-commerce platform connecting buyers and sellers globally.</p>
     </footer>
 
-    <!-- Scroll to Top Button -->
+    <!-- Scroll to Top -->
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="scroll-to-top">
       <i class="bi bi-arrow-up"></i>
     </button>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="userAccountId" class="form-label">Username</label>
+                <input type="text" id="userAccountId" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="accountPassword" class="form-label">Password</label>
+                <input type="password" id="accountPassword" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="block" id="captchaBlock">AB12C</div>
+                  <button type="button" class="btn btn-outline-secondary btn-sm" onclick="getCaptcha()">
+                    <i class="bi bi-arrow-clockwise me-1"></i> Refresh
+                  </button>
+                  <input type="text" id="loginCaptcha" class="form-control" placeholder="Enter captcha" required />
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" checked />
+                <label class="form-check-label" for="rememberMe">Remember Me</label>
+              </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-primary" onclick="validateUserCredentials()">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Signup</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form id="signupForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="s_accountId" class="form-label">Username / Email</label>
+                <input type="email" class="form-control" id="s_accountId" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <div class="form-check form-check-inline">
+                  <input type="radio" name="gender" id="genderMale" value="Male" class="form-check-input" required>
+                  <label class="form-check-label" for="genderMale">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input type="radio" name="gender" id="genderFemale" value="Female" class="form-check-input">
+                  <label class="form-check-label" for="genderFemale">Female</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" required>
+              </div>
+              <div class="mb-3">
+                <label for="s_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="s_password" required>
+              </div>
+              <div class="mb-3">
+                <label for="s_rpassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="s_rpassword" required>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-success">Signup</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
-  <!-- <script src="./js/login.js"></script> -->
 </body>
-
 </html>
